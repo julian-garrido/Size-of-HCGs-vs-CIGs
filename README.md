@@ -31,7 +31,11 @@ Steps to reproduce
 2. Fill Table 'HCGgalaxies' with the sample selection (use: datasets/inputs/preprocessing/sample_selection/galaxy-names-hcg-ned-output-cut.csv)
 3. Add new columns to HCGgalaxies table and calculate new values (See sql/HCGgalaxies_table.sql)
 4. Extract from the DB the input data for the workflow 'gather and preprocessing data'.
-5. Run 'gather and preprocessing data' workflow (it downloads images). 
+    --> see query to 'extract sample selection' in HCGgalaxies_table.sql file
+    --> exported to datasets/inputs/preprocessing/sample/selection/sample_selection_Extracted_from_db.ascii
+5. Run 'gather and preprocessing data' workflow (it downloads images).
+    --> Export result into datasets/results/preprocessing/votable.xml
+    --> Name files with - implies that nothing was downloaded
 6. Run 'gather HCG galaxy properties using sextractor' workflow.
 1. Remove this step[Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
