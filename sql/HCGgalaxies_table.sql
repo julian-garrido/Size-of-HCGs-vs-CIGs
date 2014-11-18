@@ -82,3 +82,10 @@ SELECT
 FROM
   `HCGgalaxies` hcg group by hcg.groupNumber
 
+
+-- query to extract sample selection:
+
+SELECT
+    `ObjectName`, `RA_deg`, `Dec_deg`, `groupNumber`, `ANG_SIZE_MAJ`, `ANG_SIZE_MIN`
+FROM
+    `HCGgalaxies`
