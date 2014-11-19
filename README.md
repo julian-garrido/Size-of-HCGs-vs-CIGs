@@ -33,20 +33,23 @@ Steps to reproduce
 4. Extract from the DB the input data for the workflow 'gather and preprocessing data'.
     --> see query to 'extract sample selection' in HCGgalaxies_table.sql file
     --> exported to datasets/inputs/preprocessing/sample/selection/sample_selection_Extracted_from_db.ascii
-5. Run 'gather and preprocessing data' workflow (it downloads images).
+5. Run 'gather and preprocessing data' workflow (it downloads images and set up filenames to run the next workflow).
     --> Export result into datasets/results/preprocessing/votable.xml
     --> Name files with - implies that nothing was downloaded
+    --> Save result (without the rows corresponding to the galaxies without data in SLOAN) into
+             datasets/results/preprocessing/cleanedOutputTable.xml
 6. Run 'gather HCG galaxy properties using sextractor' workflow.
+    --> Use as input the result from the previous workflow
 1. Remove this step[Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
 
 Todo list
 =========
 
-1. TODO: Create and run the script for populating the sizes from Hyperleda
-2. TODO: Obtain galaxies coordinates and velocity from sextractor
-3. TODO: Get group sizes from Hyperleda
-4. TODO: Download Images 
+1. TODO:
+2. TODO:
+3. TODO:
+4. TODO:
 
 Dependencies
 ============
