@@ -40,8 +40,21 @@ Steps to reproduce
              datasets/results/preprocessing/cleanedOutputTable.xml
 6. Run 'gather HCG galaxy properties using sextractor' workflow.
     --> Use as input the result from the previous workflow
-1. Remove this step[Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
+1. Remove this step [Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
+7. There are too many galaxies where the result is not satisfactory.
+    We try an approach to iterate over the Deblend_Mincont sex paramameter. (0.2, 0.3, 0.4) for each band
+    It requires to include Deblend_Mincont values into the contiguration votable.
+    To reduce the computational cost:
+      - new version of 'gather HCG galaxy properties using sextractor' workflow without u-z bands
+    Need to evaluate which combination of parameters is the best
+    We will need to run the wf without provenance
+    We should do this only for those galaxies where we are having problems
+    To detect a bad result we initially use this filter:
+        ISOAREA_IMAGE_diff > 1500 || ELLIPTICITY_diff > 0.1 || (THETA_IMAGE_diff > 10 && ELLIPTICITY_diff < 0.11 && ELLIPTICITY_1 > 0.1) || a_diff > 15 || separation_1 > 15 || separation_2 > 15
+        but we remove the isoarea critera
+
+
 
 Todo list
 =========
