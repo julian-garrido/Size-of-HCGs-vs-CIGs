@@ -40,6 +40,12 @@ Steps to reproduce
              datasets/results/preprocessing/cleanedOutputTable.xml
 6. Run 'gather HCG galaxy properties using sextractor' workflow.
     --> Use as input the result from the previous workflow
+    --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.02; r=0.02; g=0,03; u=0,05; z=0.005
+7. Save results in datasets/results/sextractor/1stIteration
+    --> This includes tables with valid results that have passed the filters
+    --> There is file 'table_needing_second_iteration.xml' that contains the table with the galaxies that didn't pass the filters
+8, Run a second iteration of 'gather HCG galaxy properties using sextractor' using as input 'table_needing_second_iteration.xml'
+    --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.03; r=0.03; g=0,03; u=0,05; z=0.005
 1. Remove this step [Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
 7. There are too many galaxies where the result is not satisfactory.
