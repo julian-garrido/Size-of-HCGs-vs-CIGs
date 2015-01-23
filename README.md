@@ -34,6 +34,7 @@ Steps to reproduce
     --> see query to 'extract sample selection' in HCGgalaxies_table.sql file
     --> exported to datasets/inputs/preprocessing/sample/selection/sample_selection_Extracted_from_db.ascii
 5. Run 'gather and preprocessing data' workflow (it downloads images and set up filenames to run the next workflow).
+    --> input file: datasets/inputs/preprocessing/sample/selection/sample_selection_Extracted_from_db.ascii
     --> Export result into datasets/results/preprocessing/votable.xml
     --> Name files with - implies that nothing was downloaded
     --> Save result (without the rows corresponding to the galaxies without data in SLOAN) into
@@ -43,12 +44,17 @@ Steps to reproduce
     --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.02; r=0.02; g=0,03; u=0,05; z=0.005
 7. Save results in datasets/results/sextractor/1stIteration
     --> This includes tables with valid results that have passed the filters
-    --> There is file 'table_needing_second_iteration.xml' that contains the table with the galaxies that didn't pass the filters
-8, Run a second iteration of 'gather HCG galaxy properties using sextractor' using as input 'table_needing_second_iteration.xml'
-    --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.03; r=0.03; g=0,03; u=0,05; z=0.005
+    --> There are two files 'table_needing_second_iteration.xml' and 'table_needing_second_iteration.ascii' that contains the table with the galaxies that didn't pass the filters
+8. Run 'gather and preprocessing data withDeblend' using as input 'table_needing_second_iteration.ascii'
+    --> This is a preparatory workflow to provide inputs for the iteration over DEBLEND sextractor parameter in bands rgi.
+    --> Save results as datasets/results/preprocessing/outputTableForA2ndIteration.xml
+9. Run 'gather HCG galaxy properties using sextractor_withDeblend' workflow.
+    --> Use as input the result from the previous workflow
+    --> datasets/results/preprocessing/outputTableForA2ndIteration.xml
+    --> Remove recording of intermediate data in Taverna to avoid running out of memory
 1. Remove this step [Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
-7. There are too many galaxies where the result is not satisfactory.
+7. This step will be the last choice. There are too many galaxies where the result is not satisfactory.
     We try an approach to iterate over the Deblend_Mincont sex paramameter. (0.2, 0.3, 0.4) for each band
     It requires to include Deblend_Mincont values into the contiguration votable.
     To reduce the computational cost:
