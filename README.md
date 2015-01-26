@@ -42,7 +42,7 @@ Steps to reproduce
 6. Run 'gather HCG galaxy properties using sextractor' workflow.
     --> Use as input the result from the previous workflow
     --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.02; r=0.02; g=0,03; u=0,05; z=0.005
-7. Save results in datasets/results/sextractor/1stIteration
+7. Save results in datasets/results/sextractor1stIterationTables
     --> This includes tables with valid results that have passed the filters
     --> There are two files 'table_needing_second_iteration.xml' and 'table_needing_second_iteration.ascii' that contains the table with the galaxies that didn't pass the filters
 8. Run 'gather and preprocessing data withDeblend' using as input 'table_needing_second_iteration.ascii'
