@@ -43,9 +43,9 @@ Steps to reproduce
     --> Use as input the result from the previous workflow
     --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.02; r=0.02; g=0,03; u=0,05; z=0.005
 7. Save results in datasets/results/sextractor1stIterationTables
-    --> This includes tables with valid results that have passed the filters
-    --> There are two files 'table_needing_second_iteration.xml' and 'table_needing_second_iteration.ascii' that contains the table with the galaxies that didn't pass the filters
-8. Run 'gather and preprocessing data withDeblend' using as input 'table_needing_second_iteration.ascii'
+    --> This includes tables with valid results that have passed the filters: valid_band_i_results.text, votable_band_r.text, valid_band_r_results.text
+    --> There are two files 'table_for_another_iteration.text' (xml) and 'table_for_another_iteration_ascii.text' that contains the table with the galaxies that didn't pass the filters
+8. Run 'gather and preprocessing data withDeblend' using as input 'table_for_another_iteration_ascii.text'
     --> This is a preparatory workflow to provide inputs for the iteration over DEBLEND sextractor parameter in bands rgi.
     --> Save results as datasets/results/preprocessing/outputTableForA2ndIteration.xml
 9. Run 'gather HCG galaxy properties using sextractor_withDeblend' workflow.
@@ -54,6 +54,7 @@ Steps to reproduce
     --> Remove recording of intermediate data in Taverna to avoid running out of memory
 1. Remove this step [Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
 1. Remove this step [Run the `populate_hcg_coordinates.py` script]
+
 7. This step will be the last choice. There are too many galaxies where the result is not satisfactory.
     We try an approach to iterate over the Deblend_Mincont sex paramameter. (0.2, 0.3, 0.4) for each band
     It requires to include Deblend_Mincont values into the contiguration votable.
@@ -63,10 +64,16 @@ Steps to reproduce
     We will need to run the wf without provenance
     We should do this only for those galaxies where we are having problems
     To detect a bad result we initially use this filter:
-        ISOAREA_IMAGE_diff > 1500 || ELLIPTICITY_diff > 0.1 || (THETA_IMAGE_diff > 10 && ELLIPTICITY_diff < 0.11 && ELLIPTICITY_1 > 0.1) || a_diff > 15 || separation_1 > 15 || separation_2 > 15
+       equalsIgnoreCase(ImagePathHCG_g_1, "NULL") || equalsIgnoreCase(ImagePathHCG_g_2, "NULL") || ELLIPTICITY_diff > 0.1 || (THETA_IMAGE_diff > 10 && ELLIPTICITY_diff < 0.11 && ELLIPTICITY_1 > 0.1) || a_diff > 15 || separation_1 > 15 || separation_2 > 15
         but we remove the isoarea critera
 
 
+
+Workflows
+=========
+workflows/addRowEmptyTables.t2flow: Replace and empty TableData in a VOTable by an empty row (with nulls and NaN).
+    PreCondition:
+        - The first column in the VOTable must be the object name and it contains MAGICKEYTOREPLACE
 
 Todo list
 =========
