@@ -45,28 +45,15 @@ Steps to reproduce
 7. Save results in datasets/results/sextractor1stIterationTables
     --> This includes tables with valid results that have passed the filters: valid_band_i_results.text, votable_band_r.text, valid_band_r_results.text
     --> There are two files 'table_for_another_iteration.text' (xml) and 'table_for_another_iteration_ascii.text' that contains the table with the galaxies that didn't pass the filters
-8. Run 'gather and preprocessing data withDeblend' using as input 'table_for_another_iteration_ascii.text'
+8. Run 'gather and preprocessing data withDeblend' using as input 'table_for_another_iteration_ascii.text' (1h execution without provenance)
     --> This is a preparatory workflow to provide inputs for the iteration over DEBLEND sextractor parameter in bands rgi.
     --> Save results as datasets/results/preprocessing/outputTableForA2ndIteration.xml
+    --> Save additional results as datasets/results/preprocessing/outputTableForA2ndIteration_raw.xml
 9. Run 'gather HCG galaxy properties using sextractor_withDeblend' workflow.
     --> Use as input the result from the previous workflow
-    --> datasets/results/preprocessing/outputTableForA2ndIteration.xml
+        --> datasets/results/preprocessing/outputTableForA2ndIteration.xml
     --> Remove recording of intermediate data in Taverna to avoid running out of memory
-1. Remove this step [Run the `create_hcg_table.sql` script to create the HCG data supporting table.]
-1. Remove this step [Run the `populate_hcg_coordinates.py` script]
-
-7. This step will be the last choice. There are too many galaxies where the result is not satisfactory.
-    We try an approach to iterate over the Deblend_Mincont sex paramameter. (0.2, 0.3, 0.4) for each band
-    It requires to include Deblend_Mincont values into the contiguration votable.
-    To reduce the computational cost:
-      - new version of 'gather HCG galaxy properties using sextractor' workflow without u-z bands
-    Need to evaluate which combination of parameters is the best
-    We will need to run the wf without provenance
-    We should do this only for those galaxies where we are having problems
-    To detect a bad result we initially use this filter:
-       equalsIgnoreCase(ImagePathHCG_g_1, "NULL") || equalsIgnoreCase(ImagePathHCG_g_2, "NULL") || ELLIPTICITY_diff > 0.1 || (THETA_IMAGE_diff > 10 && ELLIPTICITY_diff < 0.11 && ELLIPTICITY_1 > 0.1) || a_diff > 15 || separation_1 > 15 || separation_2 > 15
-        but we remove the isoarea critera
-
+10. Save all results of setep 9 in datasets/results/sextractor2ndIterationTables
 
 
 Workflows
@@ -78,8 +65,8 @@ workflows/addRowEmptyTables.t2flow: Replace and empty TableData in a VOTable by 
 Todo list
 =========
 
-1. TODO:
-2. TODO:
+1. TODO: Delete redundant fits files for sextractor workflow with deblend iteration
+2. TODO: Explore results opening the fits files
 3. TODO:
 4. TODO:
 
