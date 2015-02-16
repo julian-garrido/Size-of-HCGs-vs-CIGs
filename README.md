@@ -43,7 +43,7 @@ Steps to reproduce
     --> Use as input the result from the previous workflow
     --> Intial values for Deblend_Mincont (sextractor parameter in cat file): i=0.02; r=0.02; g=0,03; u=0,05; z=0.005
 7. Save results in datasets/results/sextractor1stIterationTables
-    --> This includes tables with valid results that have passed the filters: valid_band_i_results.text, votable_band_r.text, valid_band_r_results.text
+    --> This includes tables with valid results that have passed the filters: valid_band_i_results.text, valid_band_g_results.text, valid_band_r_results.text
     --> There are two files 'table_for_another_iteration.text' (xml) and 'table_for_another_iteration_ascii.text' that contains the table with the galaxies that didn't pass the filters
 8. Run 'gather and preprocessing data withDeblend' using as input 'table_for_another_iteration_ascii.text' (1h execution without provenance)
     --> This is a preparatory workflow to provide inputs for the iteration over DEBLEND sextractor parameter in bands rgi.
@@ -55,12 +55,27 @@ Steps to reproduce
     --> Remove recording of intermediate data in Taverna to avoid running out of memory
 10. Save all results of setep 9 in datasets/results/sextractor2ndIterationTables
 
+11. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+   in order to be able to verify the quality of the results. Do it for the results of 1st iteration of sextractor workflows.
+   to preview only valid results.
+    --> Input file: datasets/results/sextractor1stIterationTables/valid_band_g_results.text
+    --> Save results at datasets/results/sextractor/ds9jpeg
+
+12. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+   in order to be able to verify the quality of the results. Do it for the results of 2nd iteration of sextractor workflows.
+   to preview only valid results.
+    --> Input file: datasets/results/sextractor2ndtIterationTables/valid_band_g_results.text
+    --> Save results at datasets/results/sextractor2/ds9jpeg
+
+
 
 Workflows
 =========
 workflows/addRowEmptyTables.t2flow: Replace and empty TableData in a VOTable by an empty row (with nulls and NaN).
     PreCondition:
         - The first column in the VOTable must be the object name and it contains MAGICKEYTOREPLACE
+workflows/BuildDS9Image4sexResults.t2flow: It creates preview images using ds9 and applying scale log option to all frames.
+
 
 Todo list
 =========
