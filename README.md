@@ -67,14 +67,71 @@ Steps to reproduce
     --> Input file: datasets/results/sextractor2ndtIterationTables/valid_band_g_results.text
     --> Save results at datasets/results/sextractor2/ds9jpeg
 
+13. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+   in order to be able to verify the quality of the results. Do it for the bad results of 2nd iteration of sextractor workflows.
+   to preview only valid results.
+    --> Input file: /datasets/results/sextractor2ndIterationTables/table_for_another_iteration.text
+    --> Save results at datasets/results/sextractor2/ds9jpeg_badresults
+
+14. Review the ds9 previews and elaborate a list of the galaxies whose results can be improved by tunning the sextractor
+    configuration file.
+    --> Save votable file with these galaxies in datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
+
+15. Tune configuration files that are in datasets/results/sextractor for galaxies selected in the previous step.
+
+16. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+
+17. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+   in order to be able to verify the quality of the results. Do it for the results the previous step.
+   to preview only valid results.
+    --> Input file: datasets/results/ ********************sextractor1stIterationTables/valid_band_g_results.text
+    --> Save results at datasets/results/sextractor/ds9jpeg
+
+
 
 
 Workflows
 =========
+workflows/gather_and_preprocessing_data.t2flow:
+    It receives a sample selection and prepares a votable containing the required information an filenames that are
+    required during the experiment and the following workflow executions
+
+workflows/gather_and_preprocessing_data_withDeblend.t2flow :
+    It receives a sample selection and prepares a votable containing the required information an filenames that are
+    required during the experiment and the following workflow executions. For each galaxy, it considers different
+    combinations of parameters.
+
+Gather_HCG_galaxy_properties_using_sextractor.t2flow:
+    It performs the source extraction and add to the input table information about the each galaxy if a filter criterium
+    is passed. It requires that there is only one row for each galaxy and it may occur that there is no result for a
+    particular galaxy due to the lack of detection. It returns also a table containing the galaxies for which there was
+    no good results to easy another iteration.
+
+Gather_HCG_galaxy_properties_using_sextractor_withDeblend.t2flow:
+    It performs the source extraction and add to the input table information about the each galaxy if a filter criterium
+    is passed. It considers that there might be more than one row for each galaxy and it may occur that there is no
+    result for a particular galaxy due to the lack of detection. It returns also a table containing the galaxies for
+    which there was no good results to easy another iteration.
+    This workflow is indeed a copy of Gather_HCG_galaxy_properties_using_sextractor.t2flow where the nested
+    workflow that creates the configuration file has been removed
+
+workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow:
+    It performs the source extraction without creating the sextractor configuration file. This is theoretically created
+    in the execution of the previous workflows. The idea is to tune the cofiguration file for those cases where the initial
+    execution is not perfect. But be carefull if you modify the same files, because they would be overwritten if you
+    execute the previous workflows again.
+
+Some of the nested workflows:
+
 workflows/addRowEmptyTables.t2flow: Replace and empty TableData in a VOTable by an empty row (with nulls and NaN).
     PreCondition:
         - The first column in the VOTable must be the object name and it contains MAGICKEYTOREPLACE
+
 workflows/BuildDS9Image4sexResults.t2flow: It creates preview images using ds9 and applying scale log option to all frames.
+
+workflows/sextractor.t2flow: Run sextractor to apply source extraction to an image
+
+
 
 
 Todo list
