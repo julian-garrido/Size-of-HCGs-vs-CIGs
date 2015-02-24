@@ -1,0 +1,912 @@
+<?xml version='1.0'?>
+<VOTABLE version="1.2"
+ xmlns="http://www.ivoa.net/xml/VOTable/v1.2">
+<!--
+ !  VOTable written by STIL version 3.0-5 (uk.ac.starlink.votable.VOTableWriter)
+ !  at 2015-02-24T11:10:10
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="15">
+<DESCRIPTION>
+Table of sources detected in image
+</DESCRIPTION>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
+<FIELD arraysize="11" datatype="char" name="objectHCG"/>
+<FIELD datatype="double" name="ra_deg"/>
+<FIELD datatype="double" name="dec_deg"/>
+<FIELD datatype="short" name="groupNumber">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="ANG_SIZE_MAJ"/>
+<FIELD datatype="float" name="ANG_SIZE_MIN"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_g"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_i"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_r"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_u"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_z"/>
+<FIELD arraysize="75" datatype="char" name="imageFolder"/>
+<FIELD arraysize="84" datatype="char" name="sex_u"/>
+<FIELD arraysize="84" datatype="char" name="sex_g"/>
+<FIELD arraysize="84" datatype="char" name="sex_r"/>
+<FIELD arraysize="84" datatype="char" name="sex_i"/>
+<FIELD arraysize="84" datatype="char" name="sex_z"/>
+<FIELD arraysize="84" datatype="char" name="cat_u"/>
+<FIELD arraysize="84" datatype="char" name="cat_g"/>
+<FIELD arraysize="84" datatype="char" name="cat_r"/>
+<FIELD arraysize="84" datatype="char" name="cat_i"/>
+<FIELD arraysize="84" datatype="char" name="cat_z"/>
+<FIELD arraysize="55" datatype="char" name="sexparam"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_u"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_g"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_r"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_i"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_z"/>
+<FIELD arraysize="57" datatype="char" name="nnw"/>
+<FIELD arraysize="58" datatype="char" name="conv"/>
+<FIELD datatype="int" name="NUMBER" ucd="meta.record">
+<DESCRIPTION>Running object number</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="X_IMAGE" ucd="pos.cartesian.x;pos.barycenter;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Object position along x</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Y_IMAGE" ucd="pos.cartesian.y;pos.barycenter;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Object position along y</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="ALPHA_SKY" ucd="pos.eq.ra;pos.barycenter" unit="deg">
+<DESCRIPTION>Right ascension of barycenter (native)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="DELTA_SKY" ucd="pos.eq.dec;pos.barycenter" unit="deg">
+<DESCRIPTION>Declination of barycenter (native)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="MAG_AUTO" ucd="phot.mag;meta.main" unit="mag">
+<DESCRIPTION>Kron-like elliptical aperture magnitude</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="MAGERR_AUTO" ucd="stat.stdev;phot.mag;meta.main" unit="mag">
+<DESCRIPTION>RMS error for AUTO magnitude</DESCRIPTION>
+</FIELD>
+<FIELD datatype="int" name="ISOAREA_IMAGE" ucd="phys.area" unit="pix2">
+<DESCRIPTION>Isophotal area above Analysis threshold</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="FWHM_IMAGE" ucd="phys.size.diameter;instr.det.psf" unit="pix">
+<DESCRIPTION>FWHM assuming a gaussian core</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="BACKGROUND" ucd="instr.skyLevel" unit="ct">
+<DESCRIPTION>Background at centroid position</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="CLASS_STAR" ucd="src.class.starGalaxy">
+<DESCRIPTION>S/G classifier output</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="FLUX_BEST" ucd="phot.flux" unit="ct">
+<DESCRIPTION>Best of FLUX_AUTO and FLUX_ISOCOR</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ELLIPTICITY" ucd="src.ellipticity;instr.det">
+<DESCRIPTION>1 - B_IMAGE/A_IMAGE</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="THETA_IMAGE" ucd="pos.posAng;instr.det;meta.main" unit="deg">
+<DESCRIPTION>Position angle (CCW/x)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="FLUX_RADIUS" ucd="phys.size.radius;instr.det" unit="pix">
+<DESCRIPTION>Fraction-of-light radii</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="KRON_RADIUS" ucd="arith.factor;arith.ratio">
+<DESCRIPTION>Kron apertures in units of A or B</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="A_IMAGE" ucd="phys.size.smajAxis;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Profile RMS along major axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="B_IMAGE" ucd="phys.size.sminAxis;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Profile RMS along minor axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ERRA_IMAGE" ucd="stat.stdev;stat.max;pos.errorEllipse;instr.det;meta.main" unit="pix">
+<DESCRIPTION>RMS position error along major axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ERRB_IMAGE" ucd="stat.stdev;stat.min;pos.errorEllipse;instr.det;meta.main" unit="pix">
+<DESCRIPTION>RMS position error along minor axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Separation" ucd="pos.angDistance" unit="arcsec">
+<DESCRIPTION>Distance between matched objects along a great circle</DESCRIPTION>
+</FIELD>
+<DATA>
+<TABLEDATA>
+  <TR>
+    <TD>HCG21a</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG21b</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG26b</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG26c</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG26d</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG26g</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG37c</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG55a</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG55b</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG55c</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG55d</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG83a</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG83b</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG83c</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+  <TR>
+    <TD>HCG83d</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-32768</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>NULL</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>-2147483648</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+    <TD>NaN</TD>
+  </TR>
+</TABLEDATA>
+</DATA>
+</TABLE>
+</RESOURCE>
+</VOTABLE>

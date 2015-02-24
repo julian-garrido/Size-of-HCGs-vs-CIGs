@@ -59,19 +59,22 @@ Steps to reproduce
    in order to be able to verify the quality of the results. Do it for the results of 1st iteration of sextractor workflows.
    to preview only valid results.
     --> Input file: datasets/results/sextractor1stIterationTables/valid_band_g_results.text
-    --> Save results at datasets/results/sextractor/ds9jpeg
+    --> Save result images at datasets/results/sextractor/ds9jpeg
+    --> Save provenance files into datasets/results/ds9wf_1st_ite_good_results
 
 12. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
    in order to be able to verify the quality of the results. Do it for the results of 2nd iteration of sextractor workflows.
    to preview only valid results.
     --> Input file: datasets/results/sextractor2ndtIterationTables/valid_band_g_results.text
-    --> Save results at datasets/results/sextractor2/ds9jpeg
+    --> Save result images at datasets/results/sextractor2/ds9jpeg
+    --> Save provenance files into datasets/results/ds9wf_2nd_ite_good_results
 
 13. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
    in order to be able to verify the quality of the results. Do it for the bad results of 2nd iteration of sextractor workflows.
    to preview only valid results.
     --> Input file: /datasets/results/sextractor2ndIterationTables/table_for_another_iteration.text
-    --> Save results at datasets/results/sextractor2/ds9jpeg_badresults
+    --> Save result images at datasets/results/sextractor2/ds9jpeg_badresults
+    --> Save provenance files into datasets/results/ds9wf_2nd_ite_bad_results
 
 14. Review the ds9 previews and elaborate a list of the galaxies whose results can be improved by tunning the sextractor
     configuration file.
@@ -79,9 +82,25 @@ Steps to reproduce
 
 15. Tune configuration files that are in datasets/results/sextractor for galaxies selected in the previous step.
 
-16. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+16. Identify galaxies that were not detected in step 6 (run 'gather HCG galaxy properties using sextractor' workflow).
+    For that, select galaxies that have NULL and NaN values in votable_band_g.text, votable_band_r.text,
+    votable_band_i.text files (these are in datasets/results/sextractor1stIterationTables).
 
-17. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+    This step could be included to the workflow but we do it creating a subset in topcat to avoid rerunning all workflows
+    --> Save result in datasets/inputs/gather_galaxy_porperties/tablewithNoDetections.xml
+
+17. Tune configuration files that are in datasets/results/sextractor for galaxies selected in the previous step
+    (datasets/inputs/gather_galaxy_porperties/tablewithNoDetections.xml) and create previews
+    --> Create previews in datasets/results/sextractor/ds9jpeg
+    --> see command line file for more details scripts/edit_and_visualize_sexconfig_and_results.txt
+
+18. Review the ds9 previews and and select the ones to be added to the list of the galaxies whose results can be
+    improved by tunning the sextractor configuration file.
+    --> Modify votable file adding these galaxies in datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
+
+17. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+
+18. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
    in order to be able to verify the quality of the results. Do it for the results the previous step.
    to preview only valid results.
     --> Input file: datasets/results/ ********************sextractor1stIterationTables/valid_band_g_results.text
