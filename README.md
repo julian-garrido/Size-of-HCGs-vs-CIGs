@@ -98,15 +98,18 @@ Steps to reproduce
     improved by tunning the sextractor configuration file.
     --> Modify votable file adding these galaxies in datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
 
-17. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+19. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+    --> Input table:  datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
 
-18. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
+20??. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
    in order to be able to verify the quality of the results. Do it for the results the previous step.
    to preview only valid results.
     --> Input file: datasets/results/ ********************sextractor1stIterationTables/valid_band_g_results.text
     --> Save results at datasets/results/sextractor/ds9jpeg
 
 
+21. Review all results with mirian and modify additional sex config files. During the revision commands to run sextractor
+    and build ds9 pre-visualization are saved in scripts/edit_and_visualize_seconfig_and_results.txt
 
 
 Workflows
