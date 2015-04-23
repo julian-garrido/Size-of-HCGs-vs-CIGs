@@ -187,6 +187,13 @@ sex ../images/HCG97a/*-g.fits -c ./HCG97a_g.sex
 sex ../images/HCG97a/*-i.fits -c ./HCG97a_i.sex
 ds9 -height 1024 -width 1024 -scale log  HCG97a_seg_g.fits HCG97a_seg_r.fits HCG97a_seg_i.fits -saveimage jpeg ./ds9jpeg/revision/HCG97a.jpg &
 
+gedit HCG97a_r.sex HCG97a_g.sex HCG97a_i.sex &
+sex ../images/HCG97a/*-r-patched.fits -c ./HCG97a_r.sex
+sex ../images/HCG97a/*-g-patched.fits -c ./HCG97a_g.sex
+sex ../images/HCG97a/*-i-patched.fits -c ./HCG97a_i.sex
+ds9 -height 1024 -width 1024 -scale log  HCG97a_seg_g.fits HCG97a_seg_r.fits HCG97a_seg_i.fits -saveimage jpeg ./ds9jpeg/revision/HCG97a.jpg &
+
+
 gedit HCG99b_r.sex HCG99b_g.sex HCG99b_i.sex &
 sex ../images/HCG99b/*-r.fits -c ./HCG99b_r.sex
 sex ../images/HCG99b/*-g.fits -c ./HCG99b_g.sex
@@ -220,6 +227,16 @@ sex ../images/HCG06b/*-g.fits -c ./HCG06b_g.sex
 sex ../images/HCG06b/*-i.fits -c ./HCG06b_i.sex
 ds9 -height 1024 -width 1024 -scale log  HCG06b_seg_g.fits HCG06b_seg_r.fits HCG06b_seg_i.fits -saveimage jpeg ./ds9jpeg/revision/HCG06b.jpg &
 
+gedit HCG06b_r.sex HCG06b_g.sex HCG06b_i.sex &
+sex ../images/HCG06b/*-r-patched.fits -c ./HCG06b_r.sex
+sex ../images/HCG06b/*-g-patched.fits -c ./HCG06b_g.sex
+sex ../images/HCG06b/*-i-patched.fits -c ./HCG06b_i.sex
+ds9 -height 1024 -width 1024 -scale log  HCG06b_seg_g.fits HCG06b_seg_r.fits HCG06b_seg_i.fits -saveimage jpeg ./ds9jpeg/revision/HCG06b.jpg &
+
+gedit HCG06c_r.sex HCG06c_g.sex HCG06c_i.sex &
+sex ../images/HCG06c/*-r-patched.fits -c ./HCG06c_r.sex
+sex ../images/HCG06c/*-g-patched.fits -c ./HCG06c_g.sex
+sex ../images/HCG06c/*-i-patched.fits -c ./HCG06c_i.sex
 ds9 -height 1024 -width 1024 -scale log  HCG06c_seg_g.fits HCG06c_seg_r.fits HCG06c_seg_i.fits -saveimage jpeg ./ds9jpeg/revision/HCG06c.jpg &
 
 gedit HCG15e_r.sex HCG15e_g.sex HCG15e_i.sex &

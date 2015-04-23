@@ -53,7 +53,7 @@ Steps to reproduce
     --> Use as input the result from the previous workflow
         --> datasets/results/preprocessing/outputTableForA2ndIteration.xml
     --> Remove recording of intermediate data in Taverna to avoid running out of memory
-10. Save all results of setep 9 in datasets/results/sextractor2ndIterationTables
+10. Save all results of setp 9 in datasets/results/sextractor2ndIterationTables
 
 11. Run BuildDS9Image4sexResults.t2flow to create preview images of the resulting sextractor seg images
    in order to be able to verify the quality of the results. Do it for the results of 1st iteration of sextractor workflows.
@@ -97,6 +97,7 @@ Steps to reproduce
 18. Review the ds9 previews and and select the ones to be added to the list of the galaxies whose results can be
     improved by tunning the sextractor configuration file.
     --> Modify votable file adding these galaxies in datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
+    (all the images where cut but one (HCG 37c)
 
 19. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
     --> Input table:  datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
@@ -108,9 +109,18 @@ Steps to reproduce
     --> Save results at datasets/results/sextractor/ds9jpeg
 
 
-21. Review all results with mirian and modify additional sex config files. During the revision commands to run sextractor
-    and build ds9 pre-visualization are saved in scripts/edit_and_visualize_seconfig_and_results.txt
+21. Review all results with mirian and modify additional sex config files. During the revision:
+    i) commands to run sextractor and build ds9 pre-visualization are saved in scripts/edit_and_visualize_seconfig_and_results.txt
+    ii) the review was documented at http://amiga.iaa.es:8888/display/science/Review+of+source+detection
+    iii) three images from dataset/images are modified to mask a star (HCG 06b, 06c and 97a). new image files are created and
+    added to the results/images folders (with -patched sufix). The tableforCustomizedListOfConfigFiles.xml file is modified accordingly.
+    iv) the file datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml is modified to force the use
+    of different images for some galaxies (this is done when one image is too small and the image from a galaxy of the same
+    group is bigger)
 
+
+22. NEXT: Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+    --> Input table:  datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
 
 Workflows
 =========
