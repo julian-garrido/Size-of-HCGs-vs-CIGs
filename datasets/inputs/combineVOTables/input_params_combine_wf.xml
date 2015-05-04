@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:dataThingMap xmlns:b="http://org.embl.ebi.escience/baclava/0.1alpha">
+  <b:dataThing key="list_of_galaxies_to_reject_from_votable1">
+    <b:myGridDataDocument lsid="" syntactictype="'text/plain'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>text/plain</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData>SENHMDFhCkhDRzcyYgpIQ0c3NWEKSENHNzZiCkhDRzc5YgpIQ0c5MmMKSENHOTJkCkhDRzk0YQpI
+Q0c5NGIKSENHOTRkCkhDRzEzYwpIQ0c0NGQKSENHNTdhCkhDRzY5YQpIQ0c3MmQKSENHNzJmCkhD
+Rzc0YQpIQ0c3NGMKSENHODFjCkhDRzgxZApIR0M4MmMKSENHOTVhCkhDRzk1YwpIQ0cwNmMKSENH
+MDhhCkhDRzA4ZApIQ0cxMGIKSENHMTVkCkhDRzE1ZgpIQ0cxNmEKSENHMTdlCkhDRzM3YgpIQ0cz
+N2QKSENHMzljCkhDRzQ0YwpIQ0c0N2IKSENHNTZiCkhDRzU2YwpIQ0c1NmQKSENHNThkCkhDRzY5
+YwpIQ0c2OWQKSENHNzBnCkhDRzc0ZQpIQ0c4MWEKSENHODFiCkhDRzgyYQpIQ0c4NGEKSENHODhk
+CkhDRzk3YQpIQ0c5OWIKSENHOTlj</b:dataElementData>
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable1_band_r">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable2_band_i">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="list_of_galaxies_to_reject_from_votable2">
+    <b:myGridDataDocument lsid="" syntactictype="'text/plain'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>text/plain</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData>SENHMTNjCkhDRzQ0ZApIQ0c1N2EKSENHNjlhCkhDRzcyZApIQ0c3MmYKSENHNzRhCkhDRzc0YwpI
+Q0c4MWMKSENHODFkCkhHQzgyYwpIQ0c5NWEKSENHOTVjCkhDRzMxZwpIQ0c0N2QKSENHNjhhCkhD
+RzY4YgpIQ0c2OGMKSENHMzdj</b:dataElementData>
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="list_of_galaxies">
+    <b:myGridDataDocument lsid="" syntactictype="'text/plain'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>text/plain</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData>SENHMDFhCkhDRzcyYgpIQ0c3NWEKSENHNzZiCkhDRzc5YgpIQ0c5MmMKSENHOTJkCkhDRzk0YQpI
+Q0c5NGIKSENHOTRk</b:dataElementData>
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable1_band_i">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable1_band_g">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable2_band_g">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+  <b:dataThing key="votable2_band_r">
+    <b:myGridDataDocument lsid="" syntactictype="'java/net.sf.taverna.t2.reference.impl.external.file.FileReference'">
+      <s:metadata xmlns:s="http://org.embl.ebi.escience/xscufl/0.1alpha">
+        <s:mimeTypes>
+          <s:mimeType>java/net.sf.taverna.t2.reference.impl.external.file.FileReference</s:mimeType>
+        </s:mimeTypes>
+      </s:metadata>
+      <b:dataElement lsid="">
+        <b:dataElementData />
+      </b:dataElement>
+    </b:myGridDataDocument>
+  </b:dataThing>
+</b:dataThingMap>
+

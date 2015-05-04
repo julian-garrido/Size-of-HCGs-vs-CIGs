@@ -1,5 +1,7 @@
 ds9 -height 1024 -width 1024 -scale log  /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG01a_seg_g.fits /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG01a_seg_r.fits /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG01a_seg_i.fits /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG01a_seg_z.fits /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG01a_seg_u.fits -saveimage jpeg /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/ds9jpeg/HCG01a_1.jpeg -quit
 
+ds9 -height 1024 -width 1024 -scale log  HCG01a_seg_g.fits HCG01a_seg_r.fits HCG01a_seg_i.fits &
+ds9 -height 1024 -width 1024 -scale log  HCG01c_seg_g.fits HCG01c_seg_r.fits HCG01c_seg_i.fits &
 
 sex /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG88a/J205235.43-054240.0-i.fits -c /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG88a_i.sex
 

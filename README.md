@@ -113,14 +113,42 @@ Steps to reproduce
     i) commands to run sextractor and build ds9 pre-visualization are saved in scripts/edit_and_visualize_seconfig_and_results.txt
     ii) the review was documented at http://amiga.iaa.es:8888/display/science/Review+of+source+detection
     iii) three images from dataset/images are modified to mask a star (HCG 06b, 06c and 97a). new image files are created and
-    added to the results/images folders (with -patched sufix). The tableforCustomizedListOfConfigFiles.xml file is modified accordingly.
+    added to the results/images folders (with -ptch sufix, patched). The tableforCustomizedListOfConfigFiles.xml file is modified accordingly.
     iv) the file datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml is modified to force the use
     of different images for some galaxies (this is done when one image is too small and the image from a galaxy of the same
     group is bigger)
 
 
-22. NEXT: Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+22. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
     --> Input table:  datasets/inputs/gather_galaxy_porperties/tableforCustomizedListOfConfigFiles.xml
+
+23. Save results in datasets/results/sextractor3rdIterationTables.
+    This includes votable_band_XXX_results.text files (for each band).
+
+24. Run combineVOtables.t2flow wf to combine results from 1st iteration of the processing wf (sextractor) and
+    the 3rd iteration of the workflow (considering the customized sex configuration files).
+    Remove also the galaxies that are rejected in the manual review
+     Inputs:
+      - list of galaxies to be removed from the VOTable (the ones resulting from the manual review of Julian an Mirian
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor1stIterationTables/valid_band_g_results.text
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor1stIterationTables/valid_band_i_results.text
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor1stIterationTables/valid_band_r_results.text
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor3rdIterationTables/valid_band_g_results.text
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor3rdIterationTables/valid_band_i_results.text
+      - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor3rdIterationTables/valid_band_r_results.text
+     The taverna file with the parameters for this workflow is in  datasets/inputs/combineVOTables folder
+
+25. Save results of the previous wf execution in datasets/results/combine_1st_and_3rd_it_results/
+    results:
+    - asciiTable_band_g.text
+    - table_band_g.text
+    - asciiTable_band_i.text
+    - table_band_i.text
+    - asciiTable_band_r.text
+    - table_band_r.text
+    - list_of_galaxies_to_reject_from_votable1.text
+    - list_of_galaxies_to_reject_from_votable2.text
+
 
 Workflows
 =========
@@ -153,6 +181,12 @@ workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow:
     execution is not perfect. But be carefull if you modify the same files, because they would be overwritten if you
     execute the previous workflows again.
 
+workflows/combineVOtables.t2flow
+    It combines votables (with the same columns) and tranforms them into ascii tables. For the three bands
+    The combined tables are provided in votable and ascii formats.
+    The columns that refer to file names and paths thar were used during the execution of other workflwos, have been removed
+    in the ascii table.
+
 Some of the nested workflows:
 
 workflows/addRowEmptyTables.t2flow: Replace and empty TableData in a VOTable by an empty row (with nulls and NaN).
@@ -163,6 +197,8 @@ workflows/BuildDS9Image4sexResults.t2flow: It creates preview images using ds9 a
 
 workflows/sextractor.t2flow: Run sextractor to apply source extraction to an image
 
+workflows/combineVOtablesForOneBand.t2flow
+    It makes the same thing that combineVOtables.t2flow, but for one band.
 
 
 

@@ -5,10 +5,14 @@
  xmlns="http://www.ivoa.net/xml/VOTable/v1.1">
 <!--
  !  VOTable written by STIL version 3.0-3 (uk.ac.starlink.votable.VOTableWriter)
- !  at 2014-11-19T19:14:07
+ !  at 2015-04-30T13:12:23
  !-->
 <RESOURCE>
-<TABLE name="astro721981844930519120.tmp">
+<TABLE name="Joined" nrows="55">
+<DESCRIPTION>
+Table of sources detected in image
+</DESCRIPTION>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
 <FIELD arraysize="11" datatype="char" name="objectHCG"/>
 <FIELD datatype="double" name="ra_deg"/>
 <FIELD datatype="double" name="dec_deg"/>
@@ -41,6 +45,71 @@
 <FIELD arraysize="89" datatype="char" name="checkimage_name_z"/>
 <FIELD arraysize="57" datatype="char" name="nnw"/>
 <FIELD arraysize="58" datatype="char" name="conv"/>
+<FIELD datatype="int" name="NUMBER" ucd="meta.record">
+<DESCRIPTION>Running object number</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="X_IMAGE" ucd="pos.cartesian.x;pos.barycenter;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Object position along x</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="Y_IMAGE" ucd="pos.cartesian.y;pos.barycenter;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Object position along y</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="ALPHA_SKY" ucd="pos.eq.ra;pos.barycenter" unit="deg">
+<DESCRIPTION>Right ascension of barycenter (native)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="DELTA_SKY" ucd="pos.eq.dec;pos.barycenter" unit="deg">
+<DESCRIPTION>Declination of barycenter (native)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="MAG_AUTO" ucd="phot.mag;meta.main" unit="mag">
+<DESCRIPTION>Kron-like elliptical aperture magnitude</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="MAGERR_AUTO" ucd="stat.stdev;phot.mag;meta.main" unit="mag">
+<DESCRIPTION>RMS error for AUTO magnitude</DESCRIPTION>
+</FIELD>
+<FIELD datatype="int" name="ISOAREA_IMAGE" ucd="phys.area" unit="pix2">
+<DESCRIPTION>Isophotal area above Analysis threshold</DESCRIPTION>
+<VALUES null='-2147483648'/>
+</FIELD>
+<FIELD datatype="float" name="FWHM_IMAGE" ucd="phys.size.diameter;instr.det.psf" unit="pix">
+<DESCRIPTION>FWHM assuming a gaussian core</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="BACKGROUND" ucd="instr.skyLevel" unit="ct">
+<DESCRIPTION>Background at centroid position</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="CLASS_STAR" ucd="src.class.starGalaxy">
+<DESCRIPTION>S/G classifier output</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="FLUX_BEST" ucd="phot.flux" unit="ct">
+<DESCRIPTION>Best of FLUX_AUTO and FLUX_ISOCOR</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ELLIPTICITY" ucd="src.ellipticity;instr.det">
+<DESCRIPTION>1 - B_IMAGE/A_IMAGE</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="THETA_IMAGE" ucd="pos.posAng;instr.det;meta.main" unit="deg">
+<DESCRIPTION>Position angle (CCW/x)</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="FLUX_RADIUS" ucd="phys.size.radius;instr.det" unit="pix">
+<DESCRIPTION>Fraction-of-light radii</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="KRON_RADIUS" ucd="arith.factor;arith.ratio">
+<DESCRIPTION>Kron apertures in units of A or B</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="A_IMAGE" ucd="phys.size.smajAxis;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Profile RMS along major axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="B_IMAGE" ucd="phys.size.sminAxis;instr.det;meta.main" unit="pix">
+<DESCRIPTION>Profile RMS along minor axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ERRA_IMAGE" ucd="stat.stdev;stat.max;pos.errorEllipse;instr.det;meta.main" unit="pix">
+<DESCRIPTION>RMS position error along major axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="float" name="ERRB_IMAGE" ucd="stat.stdev;stat.min;pos.errorEllipse;instr.det;meta.main" unit="pix">
+<DESCRIPTION>RMS position error along minor axis</DESCRIPTION>
+</FIELD>
+<FIELD datatype="double" name="Separation" ucd="pos.angDistance" unit="arcsec">
+<DESCRIPTION>Distance between matched objects along a great circle</DESCRIPTION>
+</FIELD>
 <DATA>
 <TABLEDATA>
   <TR>
@@ -74,6 +143,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG06b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>11</TD>
+    <TD>269.133</TD>
+    <TD>269.403</TD>
+    <TD>9.7925652</TD>
+    <TD>-8.3970657</TD>
+    <TD>14.1483</TD>
+    <TD>0.0025</TD>
+    <TD>2466</TD>
+    <TD>0.0</TD>
+    <TD>0.04166653</TD>
+    <TD>0.03</TD>
+    <TD>1959.858</TD>
+    <TD>0.58</TD>
+    <TD>-23.6</TD>
+    <TD>NaN</TD>
+    <TD>4.79</TD>
+    <TD>15.798</TD>
+    <TD>6.637</TD>
+    <TD>0.0399</TD>
+    <TD>0.0162</TD>
+    <TD>0.1679645518469004</TD>
   </TR>
   <TR>
     <TD>HCG06c</TD>
@@ -106,6 +196,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG06c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>11</TD>
+    <TD>276.602</TD>
+    <TD>276.386</TD>
+    <TD>9.7961243</TD>
+    <TD>-8.3998776</TD>
+    <TD>14.2618</TD>
+    <TD>0.0021</TD>
+    <TD>1960</TD>
+    <TD>0.0</TD>
+    <TD>0.03422766</TD>
+    <TD>0.03</TD>
+    <TD>1828.607</TD>
+    <TD>0.264</TD>
+    <TD>-51.5</TD>
+    <TD>NaN</TD>
+    <TD>4.6</TD>
+    <TD>9.923</TD>
+    <TD>7.305</TD>
+    <TD>0.0252</TD>
+    <TD>0.0174</TD>
+    <TD>0.290026231328208</TD>
   </TR>
   <TR>
     <TD>HCG08a</TD>
@@ -138,6 +249,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG08a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>344.24</TD>
+    <TD>342.686</TD>
+    <TD>12.3919111</TD>
+    <TD>23.5784854</TD>
+    <TD>13.2404</TD>
+    <TD>0.0011</TD>
+    <TD>4396</TD>
+    <TD>0.0</TD>
+    <TD>0.07775688</TD>
+    <TD>0.03</TD>
+    <TD>5056.281</TD>
+    <TD>0.345</TD>
+    <TD>49.5</TD>
+    <TD>NaN</TD>
+    <TD>6.13</TD>
+    <TD>17.457</TD>
+    <TD>11.439</TD>
+    <TD>0.0192</TD>
+    <TD>0.0127</TD>
+    <TD>1.4463626313985882</TD>
   </TR>
   <TR>
     <TD>HCG08d</TD>
@@ -170,6 +302,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG08d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>12</TD>
+    <TD>197.792</TD>
+    <TD>197.025</TD>
+    <TD>12.4025049</TD>
+    <TD>23.5734028</TD>
+    <TD>14.279</TD>
+    <TD>0.0015</TD>
+    <TD>1569</TD>
+    <TD>0.0</TD>
+    <TD>0.05491626</TD>
+    <TD>0.03</TD>
+    <TD>1942.746</TD>
+    <TD>0.356</TD>
+    <TD>25.7</TD>
+    <TD>NaN</TD>
+    <TD>6.02</TD>
+    <TD>9.692</TD>
+    <TD>6.241</TD>
+    <TD>0.0157</TD>
+    <TD>0.0097</TD>
+    <TD>0.3139514000967939</TD>
   </TR>
   <TR>
     <TD>HCG10b</TD>
@@ -202,6 +355,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG10b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>97</TD>
+    <TD>912.786</TD>
+    <TD>907.13</TD>
+    <TD>21.4178602</TD>
+    <TD>34.7130393</TD>
+    <TD>11.6793</TD>
+    <TD>3.0E-4</TD>
+    <TD>22720</TD>
+    <TD>0.0</TD>
+    <TD>0.1395951</TD>
+    <TD>0.03</TD>
+    <TD>21295.42</TD>
+    <TD>0.192</TD>
+    <TD>80.8</TD>
+    <TD>NaN</TD>
+    <TD>4.34</TD>
+    <TD>29.232</TD>
+    <TD>23.623</TD>
+    <TD>0.0119</TD>
+    <TD>0.0094</TD>
+    <TD>1.6045753941549228</TD>
   </TR>
   <TR>
     <TD>HCG13c</TD>
@@ -234,6 +408,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG13c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>2</TD>
+    <TD>136.449</TD>
+    <TD>136.063</TD>
+    <TD>23.0966056</TD>
+    <TD>-7.8796281</TD>
+    <TD>14.7891</TD>
+    <TD>0.0034</TD>
+    <TD>1531</TD>
+    <TD>0.0</TD>
+    <TD>0.04122604</TD>
+    <TD>0.03</TD>
+    <TD>985.0972</TD>
+    <TD>0.622</TD>
+    <TD>47.1</TD>
+    <TD>NaN</TD>
+    <TD>4.73</TD>
+    <TD>15.167</TD>
+    <TD>5.738</TD>
+    <TD>0.0473</TD>
+    <TD>0.0199</TD>
+    <TD>0.17430769563211967</TD>
   </TR>
   <TR>
     <TD>HCG15d</TD>
@@ -266,6 +461,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG15d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>23</TD>
+    <TD>339.829</TD>
+    <TD>341.108</TD>
+    <TD>31.9063289</TD>
+    <TD>2.1807019</TD>
+    <TD>13.4092</TD>
+    <TD>0.0014</TD>
+    <TD>7537</TD>
+    <TD>0.0</TD>
+    <TD>0.04741703</TD>
+    <TD>0.03</TD>
+    <TD>4328.221</TD>
+    <TD>0.156</TD>
+    <TD>-39.1</TD>
+    <TD>NaN</TD>
+    <TD>4.75</TD>
+    <TD>19.803</TD>
+    <TD>16.707</TD>
+    <TD>0.0294</TD>
+    <TD>0.0256</TD>
+    <TD>0.465678653947219</TD>
   </TR>
   <TR>
     <TD>HCG15e</TD>
@@ -298,6 +514,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG15e_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>112.983</TD>
+    <TD>114.241</TD>
+    <TD>31.8554119</TD>
+    <TD>2.1161365</TD>
+    <TD>13.8927</TD>
+    <TD>0.0016</TD>
+    <TD>3805</TD>
+    <TD>0.0</TD>
+    <TD>0.02536493</TD>
+    <TD>0.03</TD>
+    <TD>2772.86</TD>
+    <TD>0.123</TD>
+    <TD>-32.4</TD>
+    <TD>NaN</TD>
+    <TD>4.8</TD>
+    <TD>12.588</TD>
+    <TD>11.045</TD>
+    <TD>0.0216</TD>
+    <TD>0.0188</TD>
+    <TD>0.4137148352007142</TD>
   </TR>
   <TR>
     <TD>HCG15f</TD>
@@ -330,6 +567,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG15f_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>13</TD>
+    <TD>212.798</TD>
+    <TD>210.48</TD>
+    <TD>31.9074672</TD>
+    <TD>2.1901678</TD>
+    <TD>14.8945</TD>
+    <TD>0.0044</TD>
+    <TD>2439</TD>
+    <TD>0.0</TD>
+    <TD>0.03169438</TD>
+    <TD>0.0</TD>
+    <TD>885.3412</TD>
+    <TD>0.384</TD>
+    <TD>-83.8</TD>
+    <TD>NaN</TD>
+    <TD>5.41</TD>
+    <TD>15.995</TD>
+    <TD>9.849</TD>
+    <TD>0.0534</TD>
+    <TD>0.0342</TD>
+    <TD>0.8085756163257245</TD>
   </TR>
   <TR>
     <TD>HCG16a</TD>
@@ -362,6 +620,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG16a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>492.185</TD>
+    <TD>492.475</TD>
+    <TD>32.3525352</TD>
+    <TD>-10.1359028</TD>
+    <TD>11.6468</TD>
+    <TD>3.0E-4</TD>
+    <TD>19534</TD>
+    <TD>0.0</TD>
+    <TD>0.1397865</TD>
+    <TD>0.03</TD>
+    <TD>22462.62</TD>
+    <TD>0.197</TD>
+    <TD>-79.7</TD>
+    <TD>NaN</TD>
+    <TD>3.51</TD>
+    <TD>28.036</TD>
+    <TD>22.519</TD>
+    <TD>0.0143</TD>
+    <TD>0.0111</TD>
+    <TD>0.12514889649930278</TD>
   </TR>
   <TR>
     <TD>HCG17b</TD>
@@ -394,6 +673,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG17b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>2</TD>
+    <TD>204.245</TD>
+    <TD>205.179</TD>
+    <TD>33.5160853</TD>
+    <TD>13.3131197</TD>
+    <TD>14.6473</TD>
+    <TD>0.003</TD>
+    <TD>2266</TD>
+    <TD>4.68</TD>
+    <TD>0.03066751</TD>
+    <TD>0.03</TD>
+    <TD>1154.661</TD>
+    <TD>0.19</TD>
+    <TD>-52.9</TD>
+    <TD>NaN</TD>
+    <TD>4.87</TD>
+    <TD>11.551</TD>
+    <TD>9.352</TD>
+    <TD>0.0367</TD>
+    <TD>0.029</TD>
+    <TD>0.30712795183119934</TD>
   </TR>
   <TR>
     <TD>HCG17e</TD>
@@ -426,38 +726,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG17e_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
-  </TR>
-  <TR>
-    <TD>HCG25f</TD>
-    <TD>50.1889</TD>
-    <TD>-1.05397</TD>
-    <TD>25</TD>
-    <TD>0.7</TD>
-    <TD>0.34</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f/</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_u.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_g.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_r.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_i.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_z.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_u.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_g.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_r.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_i.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_z.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>15</TD>
+    <TD>171.004</TD>
+    <TD>207.518</TD>
+    <TD>33.5173996</TD>
+    <TD>13.318912</TD>
+    <TD>16.9699</TD>
+    <TD>0.0092</TD>
+    <TD>218</TD>
+    <TD>4.09</TD>
+    <TD>0.02702686</TD>
+    <TD>0.84</TD>
+    <TD>129.1597</TD>
+    <TD>0.192</TD>
+    <TD>18.6</TD>
+    <TD>NaN</TD>
+    <TD>5.38</TD>
+    <TD>3.75</TD>
+    <TD>3.03</TD>
+    <TD>0.0352</TD>
+    <TD>0.029</TD>
+    <TD>0.7627344960139527</TD>
   </TR>
   <TR>
     <TD>HCG31g</TD>
@@ -490,6 +779,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG31g_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>18</TD>
+    <TD>226.914</TD>
+    <TD>227.304</TD>
+    <TD>75.4334647</TD>
+    <TD>-4.2887716</TD>
+    <TD>14.2123</TD>
+    <TD>0.0014</TD>
+    <TD>1728</TD>
+    <TD>19.11</TD>
+    <TD>0.03540823</TD>
+    <TD>0.03</TD>
+    <TD>2065.73</TD>
+    <TD>0.014</TD>
+    <TD>60.3</TD>
+    <TD>NaN</TD>
+    <TD>5.0</TD>
+    <TD>9.023</TD>
+    <TD>8.895</TD>
+    <TD>0.0103</TD>
+    <TD>0.0099</TD>
+    <TD>0.2449386462486771</TD>
   </TR>
   <TR>
     <TD>HCG37b</TD>
@@ -522,6 +832,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG37b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>150</TD>
+    <TD>719.986</TD>
+    <TD>710.395</TD>
+    <TD>138.3870492</TD>
+    <TD>29.9998684</TD>
+    <TD>13.1413</TD>
+    <TD>9.0E-4</TD>
+    <TD>11055</TD>
+    <TD>66.39</TD>
+    <TD>0.03621933</TD>
+    <TD>0.03</TD>
+    <TD>5481.103</TD>
+    <TD>0.846</TD>
+    <TD>-15.2</TD>
+    <TD>NaN</TD>
+    <TD>4.07</TD>
+    <TD>56.335</TD>
+    <TD>8.701</TD>
+    <TD>0.0495</TD>
+    <TD>0.0081</TD>
+    <TD>3.079324464276298</TD>
   </TR>
   <TR>
     <TD>HCG37c</TD>
@@ -554,6 +885,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG37c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>151</TD>
+    <TD>572.62</TD>
+    <TD>707.966</TD>
+    <TD>138.4057671</TD>
+    <TD>29.9996</TD>
+    <TD>14.3424</TD>
+    <TD>0.0013</TD>
+    <TD>3504</TD>
+    <TD>9.3</TD>
+    <TD>0.1275428</TD>
+    <TD>0.03</TD>
+    <TD>1761.305</TD>
+    <TD>0.372</TD>
+    <TD>-26.9</TD>
+    <TD>NaN</TD>
+    <TD>3.51</TD>
+    <TD>15.747</TD>
+    <TD>9.889</TD>
+    <TD>0.0257</TD>
+    <TD>0.0138</TD>
+    <TD>0.7261132662620919</TD>
   </TR>
   <TR>
     <TD>HCG37d</TD>
@@ -586,6 +938,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG37d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>6</TD>
+    <TD>151.062</TD>
+    <TD>137.757</TD>
+    <TD>138.3911191</TD>
+    <TD>30.0142333</TD>
+    <TD>15.129</TD>
+    <TD>0.0029</TD>
+    <TD>1054</TD>
+    <TD>17.74</TD>
+    <TD>0.03477138</TD>
+    <TD>0.02</TD>
+    <TD>888.0047</TD>
+    <TD>0.173</TD>
+    <TD>4.5</TD>
+    <TD>NaN</TD>
+    <TD>6.23</TD>
+    <TD>8.445</TD>
+    <TD>6.988</TD>
+    <TD>0.0189</TD>
+    <TD>0.016</TD>
+    <TD>5.652325913725771</TD>
   </TR>
   <TR>
     <TD>HCG39c</TD>
@@ -618,38 +991,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG39c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
-  </TR>
-  <TR>
-    <TD>HCG44b</TD>
-    <TD>154.604</TD>
-    <TD>21.894</TD>
-    <TD>44</TD>
-    <TD>3.0</TD>
-    <TD>2.7</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b/</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_u.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_g.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_r.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_i.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_z.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_u.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_g.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_r.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_i.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_z.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>4</TD>
+    <TD>95.073</TD>
+    <TD>98.504</TD>
+    <TD>142.3723771</TD>
+    <TD>-1.3525295</TD>
+    <TD>16.0185</TD>
+    <TD>0.0034</TD>
+    <TD>471</TD>
+    <TD>5.91</TD>
+    <TD>0.006065376</TD>
+    <TD>0.03</TD>
+    <TD>391.3895</TD>
+    <TD>0.24</TD>
+    <TD>49.5</TD>
+    <TD>NaN</TD>
+    <TD>5.08</TD>
+    <TD>5.361</TD>
+    <TD>4.074</TD>
+    <TD>0.0154</TD>
+    <TD>0.0115</TD>
+    <TD>1.3571829624841711</TD>
   </TR>
   <TR>
     <TD>HCG44c</TD>
@@ -682,6 +1044,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>820.755</TD>
+    <TD>817.939</TD>
+    <TD>154.4107331</TD>
+    <TD>21.6881383</TD>
+    <TD>11.5094</TD>
+    <TD>5.0E-4</TD>
+    <TD>38030</TD>
+    <TD>252.05</TD>
+    <TD>0.4053218</TD>
+    <TD>0.03</TD>
+    <TD>24902.85</TD>
+    <TD>0.421</TD>
+    <TD>38.0</TD>
+    <TD>NaN</TD>
+    <TD>3.93</TD>
+    <TD>55.156</TD>
+    <TD>31.957</TD>
+    <TD>0.0244</TD>
+    <TD>0.0139</TD>
+    <TD>0.9200362894915634</TD>
   </TR>
   <TR>
     <TD>HCG44d</TD>
@@ -714,6 +1097,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>211</TD>
+    <TD>1127.446</TD>
+    <TD>1139.414</TD>
+    <TD>154.4500732</TD>
+    <TD>21.8736205</TD>
+    <TD>12.8037</TD>
+    <TD>0.0016</TD>
+    <TD>17384</TD>
+    <TD>214.73</TD>
+    <TD>0.04090247</TD>
+    <TD>0.0</TD>
+    <TD>7560.275</TD>
+    <TD>0.636</TD>
+    <TD>14.2</TD>
+    <TD>NaN</TD>
+    <TD>4.7</TD>
+    <TD>59.256</TD>
+    <TD>21.589</TD>
+    <TD>0.0653</TD>
+    <TD>0.0219</TD>
+    <TD>3.766458766806155</TD>
   </TR>
   <TR>
     <TD>HCG45d</TD>
@@ -746,6 +1150,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG45d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>4</TD>
+    <TD>109.079</TD>
+    <TD>105.985</TD>
+    <TD>154.817447</TD>
+    <TD>59.1375433</TD>
+    <TD>15.7486</TD>
+    <TD>0.0035</TD>
+    <TD>682</TD>
+    <TD>4.29</TD>
+    <TD>0.03093818</TD>
+    <TD>0.08</TD>
+    <TD>501.8351</TD>
+    <TD>0.194</TD>
+    <TD>57.3</TD>
+    <TD>NaN</TD>
+    <TD>5.09</TD>
+    <TD>5.446</TD>
+    <TD>4.387</TD>
+    <TD>0.021</TD>
+    <TD>0.0172</TD>
+    <TD>1.0414370213139623</TD>
   </TR>
   <TR>
     <TD>HCG47b</TD>
@@ -778,6 +1203,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG47b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>9</TD>
+    <TD>226.757</TD>
+    <TD>231.819</TD>
+    <TD>156.4525371</TD>
+    <TD>13.7279351</TD>
+    <TD>13.8459</TD>
+    <TD>0.0012</TD>
+    <TD>2041</TD>
+    <TD>4.47</TD>
+    <TD>0.03636774</TD>
+    <TD>0.03</TD>
+    <TD>2894.828</TD>
+    <TD>0.103</TD>
+    <TD>13.4</TD>
+    <TD>NaN</TD>
+    <TD>4.98</TD>
+    <TD>9.255</TD>
+    <TD>8.298</TD>
+    <TD>0.0113</TD>
+    <TD>0.0101</TD>
+    <TD>1.8825706514020155</TD>
   </TR>
   <TR>
     <TD>HCG47d</TD>
@@ -810,38 +1256,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG47d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
-  </TR>
-  <TR>
-    <TD>HCG51d</TD>
-    <TD>170.627</TD>
-    <TD>24.2999</TD>
-    <TD>51</TD>
-    <TD>0.3</TD>
-    <TD>0.3</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51d/</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_u.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_g.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_r.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_i.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_z.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_u.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_g.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_r.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_i.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_z.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>8</TD>
+    <TD>204.986</TD>
+    <TD>204.718</TD>
+    <TD>156.4490016</TD>
+    <TD>13.749069</TD>
+    <TD>14.6442</TD>
+    <TD>0.0034</TD>
+    <TD>1326</TD>
+    <TD>15.77</TD>
+    <TD>0.0221359</TD>
+    <TD>0.0</TD>
+    <TD>1387.825</TD>
+    <TD>0.218</TD>
+    <TD>76.0</TD>
+    <TD>NaN</TD>
+    <TD>6.19</TD>
+    <TD>10.86</TD>
+    <TD>8.489</TD>
+    <TD>0.028</TD>
+    <TD>0.0228</TD>
+    <TD>0.11174016059517972</TD>
   </TR>
   <TR>
     <TD>HCG56b</TD>
@@ -874,6 +1309,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG56b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>246.833</TD>
+    <TD>246.775</TD>
+    <TD>173.1679391</TD>
+    <TD>52.9504302</TD>
+    <TD>13.6758</TD>
+    <TD>7.0E-4</TD>
+    <TD>3549</TD>
+    <TD>9.1</TD>
+    <TD>0.01441428</TD>
+    <TD>0.03</TD>
+    <TD>3599.885</TD>
+    <TD>0.71</TD>
+    <TD>-34.3</TD>
+    <TD>NaN</TD>
+    <TD>3.15</TD>
+    <TD>19.596</TD>
+    <TD>5.692</TD>
+    <TD>0.0213</TD>
+    <TD>0.0072</TD>
+    <TD>0.17108099270081153</TD>
   </TR>
   <TR>
     <TD>HCG56c</TD>
@@ -906,6 +1362,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG56c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>16</TD>
+    <TD>280.118</TD>
+    <TD>280.158</TD>
+    <TD>173.1530697</TD>
+    <TD>52.9476624</TD>
+    <TD>14.0413</TD>
+    <TD>0.0011</TD>
+    <TD>3070</TD>
+    <TD>4.08</TD>
+    <TD>0.02540582</TD>
+    <TD>0.03</TD>
+    <TD>2276.107</TD>
+    <TD>0.167</TD>
+    <TD>-53.6</TD>
+    <TD>NaN</TD>
+    <TD>3.69</TD>
+    <TD>11.754</TD>
+    <TD>9.795</TD>
+    <TD>0.019</TD>
+    <TD>0.014</TD>
+    <TD>0.20293065630820634</TD>
   </TR>
   <TR>
     <TD>HCG56d</TD>
@@ -938,6 +1415,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG56d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>3</TD>
+    <TD>157.887</TD>
+    <TD>158.967</TD>
+    <TD>173.1472945</TD>
+    <TD>52.9472413</TD>
+    <TD>14.8455</TD>
+    <TD>0.0025</TD>
+    <TD>1813</TD>
+    <TD>9.03</TD>
+    <TD>0.02549171</TD>
+    <TD>0.03</TD>
+    <TD>1040.531</TD>
+    <TD>0.494</TD>
+    <TD>60.2</TD>
+    <TD>NaN</TD>
+    <TD>4.23</TD>
+    <TD>13.582</TD>
+    <TD>6.867</TD>
+    <TD>0.0358</TD>
+    <TD>0.0186</TD>
+    <TD>0.672867954995385</TD>
   </TR>
   <TR>
     <TD>HCG57a</TD>
@@ -970,6 +1468,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG57a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>41</TD>
+    <TD>652.047</TD>
+    <TD>641.308</TD>
+    <TD>174.4740455</TD>
+    <TD>21.9811039</TD>
+    <TD>12.6935</TD>
+    <TD>8.0E-4</TD>
+    <TD>12577</TD>
+    <TD>39.13</TD>
+    <TD>0.09252671</TD>
+    <TD>0.03</TD>
+    <TD>8147.582</TD>
+    <TD>0.672</TD>
+    <TD>24.6</TD>
+    <TD>NaN</TD>
+    <TD>4.01</TD>
+    <TD>41.395</TD>
+    <TD>13.583</TD>
+    <TD>0.0373</TD>
+    <TD>0.0118</TD>
+    <TD>3.3599822346392085</TD>
   </TR>
   <TR>
     <TD>HCG58d</TD>
@@ -1002,38 +1521,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG58d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
-  </TR>
-    <TR>
-    <TD>HCG59d</TD>
-    <TD>177.128</TD>
-    <TD>12.7298</TD>
-    <TD>59</TD>
-    <TD>0.69</TD>
-    <TD>0.43</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d/</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_u.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_g.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_r.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_i.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_z.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_u.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_g.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_r.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_i.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_z.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>340.82</TD>
+    <TD>345.358</TD>
+    <TD>175.5244674</TD>
+    <TD>10.3511393</TD>
+    <TD>13.0642</TD>
+    <TD>9.0E-4</TD>
+    <TD>9374</TD>
+    <TD>5.59</TD>
+    <TD>0.04261631</TD>
+    <TD>0.03</TD>
+    <TD>5947.28</TD>
+    <TD>0.154</TD>
+    <TD>58.8</TD>
+    <TD>NaN</TD>
+    <TD>4.02</TD>
+    <TD>20.014</TD>
+    <TD>16.929</TD>
+    <TD>0.0214</TD>
+    <TD>0.0189</TD>
+    <TD>1.6612906050843526</TD>
   </TR>
   <TR>
     <TD>HCG68a</TD>
@@ -1066,6 +1574,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG68a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>62</TD>
+    <TD>831.952</TD>
+    <TD>833.957</TD>
+    <TD>208.3612233</TD>
+    <TD>40.2830503</TD>
+    <TD>10.2411</TD>
+    <TD>2.0E-4</TD>
+    <TD>51214</TD>
+    <TD>21.21</TD>
+    <TD>0.4832684</TD>
+    <TD>0.03</TD>
+    <TD>79880.96</TD>
+    <TD>0.493</TD>
+    <TD>53.9</TD>
+    <TD>NaN</TD>
+    <TD>3.91</TD>
+    <TD>56.964</TD>
+    <TD>28.874</TD>
+    <TD>0.0116</TD>
+    <TD>0.0061</TD>
+    <TD>0.6394238572416253</TD>
   </TR>
   <TR>
     <TD>HCG68b</TD>
@@ -1098,6 +1627,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG68b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>528.379</TD>
+    <TD>531.027</TD>
+    <TD>208.361306</TD>
+    <TD>40.302758</TD>
+    <TD>10.4608</TD>
+    <TD>3.0E-4</TD>
+    <TD>42089</TD>
+    <TD>10.47</TD>
+    <TD>0.5674302</TD>
+    <TD>0.03</TD>
+    <TD>49866.69</TD>
+    <TD>0.145</TD>
+    <TD>22.3</TD>
+    <TD>NaN</TD>
+    <TD>5.25</TD>
+    <TD>44.348</TD>
+    <TD>37.927</TD>
+    <TD>0.0128</TD>
+    <TD>0.0106</TD>
+    <TD>0.8656798285281623</TD>
   </TR>
   <TR>
     <TD>HCG68c</TD>
@@ -1130,6 +1680,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG68c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>70</TD>
+    <TD>1219.055</TD>
+    <TD>1209.165</TD>
+    <TD>208.3390537</TD>
+    <TD>40.3635331</TD>
+    <TD>10.5127</TD>
+    <TD>3.0E-4</TD>
+    <TD>47689</TD>
+    <TD>35.19</TD>
+    <TD>0.5307702</TD>
+    <TD>0.03</TD>
+    <TD>62364.71</TD>
+    <TD>0.266</TD>
+    <TD>-51.3</TD>
+    <TD>NaN</TD>
+    <TD>6.02</TD>
+    <TD>57.746</TD>
+    <TD>42.393</TD>
+    <TD>0.0163</TD>
+    <TD>0.0117</TD>
+    <TD>2.9124482363221627</TD>
   </TR>
   <TR>
     <TD>HCG69a</TD>
@@ -1162,6 +1733,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG69a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>76</TD>
+    <TD>599.886</TD>
+    <TD>598.348</TD>
+    <TD>208.8738316</TD>
+    <TD>25.0736833</TD>
+    <TD>13.6096</TD>
+    <TD>0.0019</TD>
+    <TD>6544</TD>
+    <TD>55.22</TD>
+    <TD>0.0269166</TD>
+    <TD>0.0</TD>
+    <TD>3028.867</TD>
+    <TD>0.696</TD>
+    <TD>-35.0</TD>
+    <TD>NaN</TD>
+    <TD>4.92</TD>
+    <TD>34.547</TD>
+    <TD>10.506</TD>
+    <TD>0.057</TD>
+    <TD>0.0166</TD>
+    <TD>0.5523914057735835</TD>
   </TR>
   <TR>
     <TD>HCG69c</TD>
@@ -1194,6 +1786,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG69c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>6</TD>
+    <TD>173.643</TD>
+    <TD>170.82</TD>
+    <TD>208.8856183</TD>
+    <TD>25.0744352</TD>
+    <TD>14.4261</TD>
+    <TD>0.0014</TD>
+    <TD>2059</TD>
+    <TD>5.97</TD>
+    <TD>0.02058279</TD>
+    <TD>0.03</TD>
+    <TD>1696.458</TD>
+    <TD>0.36</TD>
+    <TD>19.2</TD>
+    <TD>NaN</TD>
+    <TD>4.13</TD>
+    <TD>9.92</TD>
+    <TD>6.348</TD>
+    <TD>0.0187</TD>
+    <TD>0.0119</TD>
+    <TD>1.251054652340419</TD>
   </TR>
   <TR>
     <TD>HCG69d</TD>
@@ -1226,6 +1839,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG69d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>78</TD>
+    <TD>645.61</TD>
+    <TD>597.344</TD>
+    <TD>208.8682787</TD>
+    <TD>25.0735728</TD>
+    <TD>15.3776</TD>
+    <TD>0.0026</TD>
+    <TD>844</TD>
+    <TD>6.28</TD>
+    <TD>0.02310881</TD>
+    <TD>0.03</TD>
+    <TD>640.4417</TD>
+    <TD>0.524</TD>
+    <TD>-47.8</TD>
+    <TD>NaN</TD>
+    <TD>3.99</TD>
+    <TD>9.421</TD>
+    <TD>4.482</TD>
+    <TD>0.0314</TD>
+    <TD>0.0132</TD>
+    <TD>0.9140316078153118</TD>
   </TR>
   <TR>
     <TD>HCG70g</TD>
@@ -1258,38 +1892,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG70g_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
-  </TR>
-  <TR>
-    <TD>HCG72b</TD>
-    <TD>221.979</TD>
-    <TD>19.06</TD>
-    <TD>72</TD>
-    <TD>0.52</TD>
-    <TD>0.22</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b/</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_u.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_g.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_r.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_i.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_z.sex</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_u.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_g.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_r.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_i.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_z.cat</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_u.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_g.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_r.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_i.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_z.fits</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
-    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>94.338</TD>
+    <TD>91.488</TD>
+    <TD>211.0005605</TD>
+    <TD>33.3317537</TD>
+    <TD>14.8043</TD>
+    <TD>0.0014</TD>
+    <TD>1950</TD>
+    <TD>5.32</TD>
+    <TD>0.005732569</TD>
+    <TD>0.03</TD>
+    <TD>1197.46</TD>
+    <TD>0.293</TD>
+    <TD>-78.9</TD>
+    <TD>NaN</TD>
+    <TD>3.16</TD>
+    <TD>10.938</TD>
+    <TD>7.733</TD>
+    <TD>0.0293</TD>
+    <TD>0.0208</TD>
+    <TD>1.3359940071290706</TD>
   </TR>
   <TR>
     <TD>HCG72c</TD>
@@ -1322,6 +1945,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>11</TD>
+    <TD>229.777</TD>
+    <TD>227.429</TD>
+    <TD>221.986735</TD>
+    <TD>19.0450922</TD>
+    <TD>14.3799</TD>
+    <TD>0.0018</TD>
+    <TD>1638</TD>
+    <TD>0.0</TD>
+    <TD>0.0357426</TD>
+    <TD>0.03</TD>
+    <TD>1770.197</TD>
+    <TD>0.272</TD>
+    <TD>51.3</TD>
+    <TD>NaN</TD>
+    <TD>5.32</TD>
+    <TD>9.322</TD>
+    <TD>6.787</TD>
+    <TD>0.0163</TD>
+    <TD>0.0118</TD>
+    <TD>0.9022170597692637</TD>
   </TR>
   <TR>
     <TD>HCG72d</TD>
@@ -1354,6 +1998,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>3</TD>
+    <TD>76.158</TD>
+    <TD>75.077</TD>
+    <TD>221.9819816</TD>
+    <TD>19.0571985</TD>
+    <TD>14.1201</TD>
+    <TD>0.0019</TD>
+    <TD>3832</TD>
+    <TD>0.0</TD>
+    <TD>0.03397833</TD>
+    <TD>0.03</TD>
+    <TD>2171.876</TD>
+    <TD>0.618</TD>
+    <TD>-73.5</TD>
+    <TD>NaN</TD>
+    <TD>3.92</TD>
+    <TD>23.637</TD>
+    <TD>9.038</TD>
+    <TD>0.0461</TD>
+    <TD>0.0171</TD>
+    <TD>0.37072512511700084</TD>
   </TR>
   <TR>
     <TD>HCG72f</TD>
@@ -1386,6 +2051,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72f_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>3</TD>
+    <TD>119.911</TD>
+    <TD>116.771</TD>
+    <TD>221.9793122</TD>
+    <TD>19.0477048</TD>
+    <TD>14.8009</TD>
+    <TD>0.0064</TD>
+    <TD>1642</TD>
+    <TD>0.0</TD>
+    <TD>0.02136198</TD>
+    <TD>0.16</TD>
+    <TD>681.7073</TD>
+    <TD>0.758</TD>
+    <TD>89.9</TD>
+    <TD>NaN</TD>
+    <TD>5.81</TD>
+    <TD>42.655</TD>
+    <TD>10.333</TD>
+    <TD>0.1905</TD>
+    <TD>0.0473</TD>
+    <TD>2.58495830462523</TD>
   </TR>
   <TR>
     <TD>HCG74a</TD>
@@ -1418,6 +2104,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG74a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>310.425</TD>
+    <TD>311.002</TD>
+    <TD>229.8530677</TD>
+    <TD>20.8963003</TD>
+    <TD>12.3778</TD>
+    <TD>0.001</TD>
+    <TD>17072</TD>
+    <TD>0.0</TD>
+    <TD>0.1006577</TD>
+    <TD>0.03</TD>
+    <TD>8728.364</TD>
+    <TD>0.231</TD>
+    <TD>18.3</TD>
+    <TD>NaN</TD>
+    <TD>5.2</TD>
+    <TD>33.551</TD>
+    <TD>25.8</TD>
+    <TD>0.0344</TD>
+    <TD>0.025</TD>
+    <TD>0.22769248965245456</TD>
   </TR>
   <TR>
     <TD>HCG74c</TD>
@@ -1450,6 +2157,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG74c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>5</TD>
+    <TD>173.794</TD>
+    <TD>170.563</TD>
+    <TD>229.8576122</TD>
+    <TD>20.8995069</TD>
+    <TD>15.1849</TD>
+    <TD>0.0017</TD>
+    <TD>1174</TD>
+    <TD>0.0</TD>
+    <TD>0.084811</TD>
+    <TD>0.03</TD>
+    <TD>849.3507</TD>
+    <TD>0.222</TD>
+    <TD>28.4</TD>
+    <TD>NaN</TD>
+    <TD>2.93</TD>
+    <TD>7.789</TD>
+    <TD>6.058</TD>
+    <TD>0.0186</TD>
+    <TD>0.0153</TD>
+    <TD>1.3044650253582857</TD>
   </TR>
   <TR>
     <TD>HCG74e</TD>
@@ -1482,6 +2210,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG74e_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>9</TD>
+    <TD>104.609</TD>
+    <TD>255.454</TD>
+    <TD>229.865759</TD>
+    <TD>20.9088447</TD>
+    <TD>16.4528</TD>
+    <TD>0.0053</TD>
+    <TD>407</TD>
+    <TD>0.0</TD>
+    <TD>0.02826462</TD>
+    <TD>0.03</TD>
+    <TD>262.3412</TD>
+    <TD>0.389</TD>
+    <TD>-17.3</TD>
+    <TD>NaN</TD>
+    <TD>4.69</TD>
+    <TD>5.296</TD>
+    <TD>3.235</TD>
+    <TD>0.0275</TD>
+    <TD>0.0172</TD>
+    <TD>0.8345603669868964</TD>
   </TR>
   <TR>
     <TD>HCG81a</TD>
@@ -1514,6 +2263,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG81a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>6</TD>
+    <TD>152.908</TD>
+    <TD>152.825</TD>
+    <TD>244.5568975</TD>
+    <TD>12.8029907</TD>
+    <TD>15.3802</TD>
+    <TD>0.0022</TD>
+    <TD>753</TD>
+    <TD>0.0</TD>
+    <TD>0.008324231</TD>
+    <TD>0.03</TD>
+    <TD>704.582</TD>
+    <TD>0.419</TD>
+    <TD>-74.6</TD>
+    <TD>NaN</TD>
+    <TD>4.52</TD>
+    <TD>7.431</TD>
+    <TD>4.319</TD>
+    <TD>0.0147</TD>
+    <TD>0.0084</TD>
+    <TD>0.4858909290876659</TD>
   </TR>
   <TR>
     <TD>HCG81b</TD>
@@ -1546,6 +2316,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG81b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>12</TD>
+    <TD>151.993</TD>
+    <TD>150.746</TD>
+    <TD>244.5585496</TD>
+    <TD>12.7890021</TD>
+    <TD>14.831</TD>
+    <TD>0.0016</TD>
+    <TD>1054</TD>
+    <TD>0.0</TD>
+    <TD>0.02377388</TD>
+    <TD>0.03</TD>
+    <TD>1168.441</TD>
+    <TD>0.449</TD>
+    <TD>86.9</TD>
+    <TD>NaN</TD>
+    <TD>5.02</TD>
+    <TD>8.229</TD>
+    <TD>4.531</TD>
+    <TD>0.0141</TD>
+    <TD>0.0075</TD>
+    <TD>1.9191224344313933</TD>
   </TR>
   <TR>
     <TD>HCG81c</TD>
@@ -1578,6 +2369,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG81c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>9</TD>
+    <TD>154.621</TD>
+    <TD>152.249</TD>
+    <TD>244.5617043</TD>
+    <TD>12.7933274</TD>
+    <TD>15.083</TD>
+    <TD>0.0028</TD>
+    <TD>1522</TD>
+    <TD>0.0</TD>
+    <TD>0.0168418</TD>
+    <TD>0.03</TD>
+    <TD>739.9038</TD>
+    <TD>0.381</TD>
+    <TD>21.8</TD>
+    <TD>NaN</TD>
+    <TD>4.62</TD>
+    <TD>11.508</TD>
+    <TD>7.123</TD>
+    <TD>0.0397</TD>
+    <TD>0.0219</TD>
+    <TD>1.0427693785010137</TD>
   </TR>
   <TR>
     <TD>HCG81d</TD>
@@ -1610,6 +2422,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG81d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>3</TD>
+    <TD>99.671</TD>
+    <TD>98.265</TD>
+    <TD>244.5608679</TD>
+    <TD>12.7955741</TD>
+    <TD>15.5165</TD>
+    <TD>0.0023</TD>
+    <TD>907</TD>
+    <TD>0.0</TD>
+    <TD>0.01696741</TD>
+    <TD>0.03</TD>
+    <TD>601.4877</TD>
+    <TD>0.071</TD>
+    <TD>44.1</TD>
+    <TD>NaN</TD>
+    <TD>3.55</TD>
+    <TD>6.481</TD>
+    <TD>6.021</TD>
+    <TD>0.0228</TD>
+    <TD>0.0173</TD>
+    <TD>0.4730305383358811</TD>
   </TR>
   <TR>
     <TD>HCG82a</TD>
@@ -1642,6 +2475,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG82a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>1</TD>
+    <TD>339.305</TD>
+    <TD>341.455</TD>
+    <TD>247.0932219</TD>
+    <TD>32.8493501</TD>
+    <TD>12.8912</TD>
+    <TD>8.0E-4</TD>
+    <TD>7873</TD>
+    <TD>0.0</TD>
+    <TD>0.06945226</TD>
+    <TD>0.03</TD>
+    <TD>6974.332</TD>
+    <TD>0.275</TD>
+    <TD>-50.0</TD>
+    <TD>NaN</TD>
+    <TD>5.22</TD>
+    <TD>20.269</TD>
+    <TD>14.691</TD>
+    <TD>0.0162</TD>
+    <TD>0.0117</TD>
+    <TD>0.6949188730512271</TD>
   </TR>
   <TR>
     <TD>HCG82c</TD>
@@ -1674,6 +2528,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG82c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>38</TD>
+    <TD>318.496</TD>
+    <TD>317.198</TD>
+    <TD>247.0860005</TD>
+    <TD>32.8104568</TD>
+    <TD>14.3291</TD>
+    <TD>0.0025</TD>
+    <TD>2709</TD>
+    <TD>0.0</TD>
+    <TD>0.01851551</TD>
+    <TD>0.0</TD>
+    <TD>1855.114</TD>
+    <TD>0.55</TD>
+    <TD>65.7</TD>
+    <TD>NaN</TD>
+    <TD>4.77</TD>
+    <TD>17.756</TD>
+    <TD>7.995</TD>
+    <TD>0.0397</TD>
+    <TD>0.017</TD>
+    <TD>0.5155222197847932</TD>
   </TR>
   <TR>
     <TD>HCG84a</TD>
@@ -1706,6 +2581,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG84a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>13</TD>
+    <TD>222.798</TD>
+    <TD>224.278</TD>
+    <TD>251.0953667</TD>
+    <TD>77.8388856</TD>
+    <TD>13.7384</TD>
+    <TD>0.0015</TD>
+    <TD>2617</TD>
+    <TD>0.0</TD>
+    <TD>0.04270598</TD>
+    <TD>0.03</TD>
+    <TD>3196.382</TD>
+    <TD>0.302</TD>
+    <TD>-88.4</TD>
+    <TD>NaN</TD>
+    <TD>5.35</TD>
+    <TD>12.539</TD>
+    <TD>8.747</TD>
+    <TD>0.018</TD>
+    <TD>0.0124</TD>
+    <TD>0.4150925158044652</TD>
   </TR>
   <TR>
     <TD>HCG88d</TD>
@@ -1738,6 +2634,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG88d_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>35</TD>
+    <TD>265.125</TD>
+    <TD>265.33</TD>
+    <TD>313.0530414</TD>
+    <TD>-5.7983487</TD>
+    <TD>14.5206</TD>
+    <TD>0.0029</TD>
+    <TD>2892</TD>
+    <TD>0.0</TD>
+    <TD>0.008160312</TD>
+    <TD>0.0</TD>
+    <TD>1555.137</TD>
+    <TD>0.772</TD>
+    <TD>-20.1</TD>
+    <TD>NaN</TD>
+    <TD>4.36</TD>
+    <TD>26.211</TD>
+    <TD>5.963</TD>
+    <TD>0.0632</TD>
+    <TD>0.0148</TD>
+    <TD>0.1628440564563376</TD>
   </TR>
   <TR>
     <TD>HCG92e</TD>
@@ -1770,8 +2687,28 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG92e_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>64</TD>
+    <TD>416.044</TD>
+    <TD>417.274</TD>
+    <TD>338.9661268</TD>
+    <TD>33.9449301</TD>
+    <TD>13.1616</TD>
+    <TD>9.0E-4</TD>
+    <TD>5436</TD>
+    <TD>0.0</TD>
+    <TD>0.05721565</TD>
+    <TD>0.03</TD>
+    <TD>5109.57</TD>
+    <TD>0.159</TD>
+    <TD>-3.6</TD>
+    <TD>NaN</TD>
+    <TD>4.34</TD>
+    <TD>14.637</TD>
+    <TD>12.308</TD>
+    <TD>0.0169</TD>
+    <TD>0.0137</TD>
+    <TD>0.3938828428864633</TD>
   </TR>
-
   <TR>
     <TD>HCG93b</TD>
     <TD>348.822</TD>
@@ -1803,6 +2740,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG93b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>112</TD>
+    <TD>1063.58</TD>
+    <TD>1064.965</TD>
+    <TD>348.8216998</TD>
+    <TD>19.0421361</TD>
+    <TD>12.5226</TD>
+    <TD>0.001</TD>
+    <TD>17788</TD>
+    <TD>0.0</TD>
+    <TD>0.05983633</TD>
+    <TD>0.01</TD>
+    <TD>9794.195</TD>
+    <TD>0.516</TD>
+    <TD>-66.5</TD>
+    <TD>NaN</TD>
+    <TD>4.55</TD>
+    <TD>46.687</TD>
+    <TD>22.603</TD>
+    <TD>0.0462</TD>
+    <TD>0.0158</TD>
+    <TD>1.873074084872113</TD>
   </TR>
   <TR>
     <TD>HCG95a</TD>
@@ -1835,6 +2793,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG95a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>22</TD>
+    <TD>331.741</TD>
+    <TD>334.004</TD>
+    <TD>349.8751962</TD>
+    <TD>9.5082755</TD>
+    <TD>13.3208</TD>
+    <TD>0.001</TD>
+    <TD>6873</TD>
+    <TD>0.0</TD>
+    <TD>0.02372597</TD>
+    <TD>0.03</TD>
+    <TD>4695.37</TD>
+    <TD>0.316</TD>
+    <TD>-7.8</TD>
+    <TD>NaN</TD>
+    <TD>3.84</TD>
+    <TD>19.372</TD>
+    <TD>13.249</TD>
+    <TD>0.0242</TD>
+    <TD>0.0165</TD>
+    <TD>0.7247030627010339</TD>
   </TR>
   <TR>
     <TD>HCG95c</TD>
@@ -1867,6 +2846,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG95c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>23</TD>
+    <TD>364.917</TD>
+    <TD>361.118</TD>
+    <TD>349.8794516</TD>
+    <TD>9.5030929</TD>
+    <TD>14.4243</TD>
+    <TD>0.0026</TD>
+    <TD>2773</TD>
+    <TD>0.0</TD>
+    <TD>0.03143523</TD>
+    <TD>0.03</TD>
+    <TD>1443.408</TD>
+    <TD>0.273</TD>
+    <TD>-77.3</TD>
+    <TD>NaN</TD>
+    <TD>4.78</TD>
+    <TD>14.399</TD>
+    <TD>10.467</TD>
+    <TD>0.0334</TD>
+    <TD>0.0227</TD>
+    <TD>1.9967812951959374</TD>
   </TR>
   <TR>
     <TD>HCG97a</TD>
@@ -1899,6 +2899,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG97a_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>44</TD>
+    <TD>645.634</TD>
+    <TD>644.845</TD>
+    <TD>356.8458201</TD>
+    <TD>-2.300577</TD>
+    <TD>12.312</TD>
+    <TD>7.0E-4</TD>
+    <TD>7895</TD>
+    <TD>0.0</TD>
+    <TD>0.1345198</TD>
+    <TD>0.03</TD>
+    <TD>11890.14</TD>
+    <TD>0.314</TD>
+    <TD>62.7</TD>
+    <TD>NaN</TD>
+    <TD>5.83</TD>
+    <TD>22.524</TD>
+    <TD>15.443</TD>
+    <TD>0.0155</TD>
+    <TD>0.0104</TD>
+    <TD>0.7285963996386297</TD>
   </TR>
   <TR>
     <TD>HCG99b</TD>
@@ -1931,6 +2952,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG99b_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>35</TD>
+    <TD>379.512</TD>
+    <TD>378.994</TD>
+    <TD>0.195603</TD>
+    <TD>28.4019993</TD>
+    <TD>12.8588</TD>
+    <TD>9.0E-4</TD>
+    <TD>11096</TD>
+    <TD>0.0</TD>
+    <TD>0.06652637</TD>
+    <TD>0.03</TD>
+    <TD>6932.993</TD>
+    <TD>0.145</TD>
+    <TD>-60.0</TD>
+    <TD>NaN</TD>
+    <TD>4.12</TD>
+    <TD>22.32</TD>
+    <TD>19.077</TD>
+    <TD>0.0238</TD>
+    <TD>0.0197</TD>
+    <TD>0.20268287299579174</TD>
   </TR>
   <TR>
     <TD>HCG99c</TD>
@@ -1963,6 +3005,27 @@
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG99c_seg_z.fits</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
     <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>2</TD>
+    <TD>301.318</TD>
+    <TD>303.742</TD>
+    <TD>0.1836058</TD>
+    <TD>28.4014266</TD>
+    <TD>13.6537</TD>
+    <TD>0.0017</TD>
+    <TD>6238</TD>
+    <TD>0.0</TD>
+    <TD>0.04582427</TD>
+    <TD>0.03</TD>
+    <TD>3173.884</TD>
+    <TD>0.318</TD>
+    <TD>4.2</TD>
+    <TD>NaN</TD>
+    <TD>4.44</TD>
+    <TD>21.793</TD>
+    <TD>14.858</TD>
+    <TD>0.0301</TD>
+    <TD>0.0231</TD>
+    <TD>0.8691650192199502</TD>
   </TR>
 </TABLEDATA>
 </DATA>
