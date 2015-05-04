@@ -1,0 +1,223 @@
+<?xml version='1.0'?>
+<VOTABLE version="1.1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.ivoa.net/xml/VOTable/v1.1 http://www.ivoa.net/xml/VOTable/v1.1"
+ xmlns="http://www.ivoa.net/xml/VOTable/v1.1">
+<!--
+ !  VOTable written by STIL version 3.0-3 (uk.ac.starlink.votable.VOTableWriter)
+ !  at 2015-04-30T13:12:21
+ !-->
+<RESOURCE>
+<TABLE name="Joined" nrows="5">
+<DESCRIPTION>
+Table of sources detected in image
+</DESCRIPTION>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
+<PARAM arraysize="2" datatype="char" name="QUERY_STATUS" value="OK"/>
+<FIELD arraysize="11" datatype="char" name="objectHCG"/>
+<FIELD datatype="double" name="ra_deg"/>
+<FIELD datatype="double" name="dec_deg"/>
+<FIELD datatype="short" name="groupNumber">
+<VALUES null='-32768'/>
+</FIELD>
+<FIELD datatype="float" name="ANG_SIZE_MAJ"/>
+<FIELD datatype="float" name="ANG_SIZE_MIN"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_g"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_i"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_r"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_u"/>
+<FIELD arraysize="102" datatype="char" name="ImagePathHCG_z"/>
+<FIELD arraysize="75" datatype="char" name="imageFolder"/>
+<FIELD arraysize="84" datatype="char" name="sex_u"/>
+<FIELD arraysize="84" datatype="char" name="sex_g"/>
+<FIELD arraysize="84" datatype="char" name="sex_r"/>
+<FIELD arraysize="84" datatype="char" name="sex_i"/>
+<FIELD arraysize="84" datatype="char" name="sex_z"/>
+<FIELD arraysize="84" datatype="char" name="cat_u"/>
+<FIELD arraysize="84" datatype="char" name="cat_g"/>
+<FIELD arraysize="84" datatype="char" name="cat_r"/>
+<FIELD arraysize="84" datatype="char" name="cat_i"/>
+<FIELD arraysize="84" datatype="char" name="cat_z"/>
+<FIELD arraysize="55" datatype="char" name="sexparam"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_u"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_g"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_r"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_i"/>
+<FIELD arraysize="89" datatype="char" name="checkimage_name_z"/>
+<FIELD arraysize="57" datatype="char" name="nnw"/>
+<FIELD arraysize="58" datatype="char" name="conv"/>
+<FIELD arraysize="11" datatype="char" name="objectHCG_1_1"/>
+<DATA>
+<TABLEDATA>
+  <TR>
+    <TD>HCG25f</TD>
+    <TD>50.1889</TD>
+    <TD>-1.05397</TD>
+    <TD>25</TD>
+    <TD>0.7</TD>
+    <TD>0.34</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f//J032045.33-010314.2-z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG25f/</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_u.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_g.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_r.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_i.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_z.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_u.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_g.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_r.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_i.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_z.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG25f_seg_z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>HCG25f</TD>
+  </TR>
+  <TR>
+    <TD>HCG44b</TD>
+    <TD>154.604</TD>
+    <TD>21.894</TD>
+    <TD>44</TD>
+    <TD>3.0</TD>
+    <TD>2.7</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b//J101824.96+215338.3-z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG44b/</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_u.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_g.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_r.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_i.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_z.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_u.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_g.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_r.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_i.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_z.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG44b_seg_z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>HCG44b</TD>
+  </TR>
+  <TR>
+    <TD>HCG51d</TD>
+    <TD>170.627</TD>
+    <TD>24.2999</TD>
+    <TD>51</TD>
+    <TD>0.3</TD>
+    <TD>0.3</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51c//J112230.00+241645.4-z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG51d/</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_u.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_g.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_r.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_i.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_z.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_u.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_g.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_r.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_i.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_z.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG51d_seg_z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>HCG51d</TD>
+  </TR>
+  <TR>
+    <TD>HCG59d</TD>
+    <TD>177.128</TD>
+    <TD>12.7298</TD>
+    <TD>59</TD>
+    <TD>0.69</TD>
+    <TD>0.43</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d//J114830.71+124347.2-z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG59d/</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_u.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_g.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_r.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_i.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_z.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_u.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_g.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_r.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_i.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_z.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG59d_seg_z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>HCG59d</TD>
+  </TR>
+  <TR>
+    <TD>HCG72b</TD>
+    <TD>221.979</TD>
+    <TD>19.06</TD>
+    <TD>72</TD>
+    <TD>0.52</TD>
+    <TD>0.22</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b//J144754.96+190335.9-z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/images/HCG72b/</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_u.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_g.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_r.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_i.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_z.sex</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_u.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_g.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_r.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_i.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_z.cat</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/HCG.param</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_u.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_g.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_r.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_i.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor/HCG72b_seg_z.fits</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.nnw</TD>
+    <TD>/home/lourdes/src/Size-of-HCGs-vs-CIGs/config/default.conv</TD>
+    <TD>HCG72b</TD>
+  </TR>
+</TABLEDATA>
+</DATA>
+</TABLE>
+</RESOURCE>
+</VOTABLE>
