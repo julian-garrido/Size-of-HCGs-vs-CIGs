@@ -149,6 +149,16 @@ Steps to reproduce
     - list_of_galaxies_to_reject_from_votable1.text
     - list_of_galaxies_to_reject_from_votable2.text
 
+26. Fix bug:
+    bug description: the flux values is missing in the final table because sextractor provides a column with float type
+    and pair of values separated by spaces. After the first operation, the values are lost and replaced by a NaN.
+    resolution: modify the beanshells that read the cat files. Now, they also replace the float type by a char type.
+    workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow is fixed. The other workflow is pending
+
+27. Duplicate datasets/results/preprocessing/cleanedOutputTable.xml into datasets/results/preprocessing/cleanedOutputTable_patched.xml
+    Modify the resulting file to include the changes that were introduced in tableforCustomizedListOfConfigFiles.xml
+      - changes in the images to be processed for each galaxy. Some of them were replaced because of the size or
+        because they were edited: 06b, 06c, 17e -> 17a, 37c -> 37b, 51d -> 51c, 69d -> 69a, 74e -> 74c
 
 Workflows
 =========
