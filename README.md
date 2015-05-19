@@ -148,6 +148,7 @@ Steps to reproduce
     - table_band_r.text
     - list_of_galaxies_to_reject_from_votable1.text
     - list_of_galaxies_to_reject_from_votable2.text
+    Comment: the HCG galaxy should have been rejected, but it wasn't.
 
 26. Fix bug:
     bug description: the flux values is missing in the final table because sextractor provides a column with float type
@@ -159,6 +160,30 @@ Steps to reproduce
     Modify the resulting file to include the changes that were introduced in tableforCustomizedListOfConfigFiles.xml
       - changes in the images to be processed for each galaxy. Some of them were replaced because of the size or
         because they were edited: 06b, 06c, 17e -> 17a, 37c -> 37b, 51d -> 51c, 69d -> 69a, 74e -> 74c
+
+28. Execute workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow
+    input Table: File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/preprocessing/cleanedOutputTable_patched.xml
+
+29. Save results at: datasets/results/sextractor4thIteration/
+- valid_band_g_results.text
+- valid_band_i_results.text
+- valid_band_r_results.text
+
+30. Execute workflow/removeRejectedSubSample.t2flow using the results from the previous step:
+    - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor4thIterationTables/valid_band_r_results.text
+    - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor4thIterationTables/valid_band_i_results.text
+    - File : /home/lourdes/src/Size-of-HCGs-vs-CIGs/datasets/results/sextractor4thIterationTables/valid_band_g_results.text
+    - list of galaxies to be removed according to the manual review.
+
+31. Comparision between the results of step 25 and 30 for band g (using band g):
+   - galaxies 51d is in the result of step 25 but not in step 30. It didn't pass the filters because of the size in one band
+   - galaxies 82c is in the result of step 25 but not in step 30. 82c was rejected and it is right if it is not in step 30
+
+32. Provide results from step 30 to Mirian to perform K Correction.
+    Result is saved in datasets/results/KCorrect/R50_SM_HCG.txt
+
+33. Run script (scripts/convertASCII_table_to_SQL.py) to transform datasets/results/KCorrect/R50_SM_HCG.txt data into sql update sentences. The resulting sql
+    script is saved in datasets/results/KCorrect/sql_script_to_update_HCG_galaxies.sql and run in the DB.
 
 Workflows
 =========
@@ -192,10 +217,14 @@ workflows/Gather_HCG_galaxy_properties_using_existing_sexConfigFile.t2flow:
     execute the previous workflows again.
 
 workflows/combineVOtables.t2flow
-    It combines votables (with the same columns) and tranforms them into ascii tables. For the three bands
+    It combines votables (with the same columns) and transforms them into ascii tables. For the three bands
     The combined tables are provided in votable and ascii formats.
     The columns that refer to file names and paths thar were used during the execution of other workflwos, have been removed
     in the ascii table.
+
+workflow/removeRejectedSubSample.t2flow
+    This workflow removed from the input table a list of rows corresponding to the rejected subsample.
+    It also transform the table into ascii format. In this case, several columns are not in the ascii file
 
 Some of the nested workflows:
 
