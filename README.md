@@ -19,13 +19,20 @@ It has the following structure:
 	   |
 	   +- workflows: folder with Taverna workflows
 	   |
-	   +- datasets: input data and result data for different steps of the experiment
+	   +- datasets: input data and result data for different steps of the experiment. datasets/results folders is not completely in GitHub due to size restrictions
 	   |
-	   +- config: configuration files to be able to run the workflows and scripts
+	   +- config: configuration and template files to be able to run the workflows and scripts
+	   |
+	   +- fig: folder with figures
+	   |
+	   +- test: folder that is used for testing specific parts of the experiment.
+	   |
+	   +- data_obsolete: files that are of no use but are preserved.
 
 
-Steps to reproduce
-==================
+
+Log that summarizes the steps accomplished during the realization of this part of the experiment
+============================================================================================================
 
 1. Create Table 'HCGgalaxies' (See HCGgalaxies_table.sql)
 2. Fill Table 'HCGgalaxies' with the sample selection (use: datasets/inputs/preprocessing/sample_selection/galaxy-names-hcg-ned-output-cut.csv)
